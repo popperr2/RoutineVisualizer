@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BjD-Ya-c2R" userLabel="LoginGroup">
-                                <rect key="frame" x="20" y="334" width="335" height="144"/>
+                                <rect key="frame" x="20" y="341" width="335" height="130"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmm-dO-lFC" userLabel="textbox_usernamelogin">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -49,16 +49,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5X-Tp-C3D" userLabel="button_login">
-                                        <rect key="frame" x="0.0" y="100" width="335" height="44"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.059931506849315065" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-WV-UJ8" userLabel="button_LogIn">
+                                        <rect key="frame" x="0.0" y="100" width="335" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="a0K-Cq-LDf"/>
-                                            <constraint firstAttribute="height" constant="44" id="s92-Kc-MY8"/>
+                                            <constraint firstAttribute="height" constant="30" id="TAs-DP-Ngg"/>
                                         </constraints>
                                         <state key="normal" title="LOG IN"/>
                                         <connections>
-                                            <action selector="loginTapped:" destination="0QZ-ZJ-Mmd" eventType="touchUpInside" id="r6i-6F-9TK"/>
+                                            <segue destination="5w9-sS-8cm" kind="presentation" id="gGk-5g-STI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -87,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xx-Pw-LBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1135.2" y="-407.0464767616192"/>
+            <point key="canvasLocation" x="-202" y="-381"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Q1a-S7-Nm0">
@@ -97,15 +95,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqj-d4-Xqh" userLabel="button_signup">
-                                <rect key="frame" x="16" y="333" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.059931506850000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="SIGN UP"/>
-                                <connections>
-                                    <action selector="loginTapped:" destination="UKK-VT-OMb" eventType="touchUpInside" id="NwA-7w-rQO"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40v-PG-7CB" userLabel="button_backtologin">
                                 <rect key="frame" x="0.0" y="748" width="375" height="30"/>
                                 <constraints>
@@ -137,6 +126,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXu-xv-epP">
+                                <rect key="frame" x="16" y="349" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="5w9-sS-8cm" kind="presentation" id="449-rR-9cA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -150,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2y-fK-ZAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1135" y="344"/>
+            <point key="canvasLocation" x="-202.40000000000001" y="360.59113300492612"/>
         </scene>
         <!--Routines-->
         <scene sceneID="GVY-Wg-EPZ">
@@ -191,14 +188,30 @@
                     <view key="view" contentMode="scaleToFill" id="kw9-EJ-Sf1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0d-3N-MRm">
+                                <rect key="frame" x="156.66666666666666" y="371" width="62" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5nx-6B-box"/>
+                                </constraints>
+                                <state key="normal" title="LOGOUT"/>
+                                <connections>
+                                    <segue destination="0QZ-ZJ-Mmd" kind="presentation" id="bym-fZ-dNT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n0d-3N-MRm" firstAttribute="centerX" secondItem="kw9-EJ-Sf1" secondAttribute="centerX" id="aBd-rv-2t0"/>
+                            <constraint firstItem="n0d-3N-MRm" firstAttribute="centerY" secondItem="kw9-EJ-Sf1" secondAttribute="centerY" id="zXd-9h-czZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2X3-r1-HuP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="ZG5-vl-ETe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGe-7X-R1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2081" y="866"/>
+            <point key="canvasLocation" x="2080.8000000000002" y="865.27093596059115"/>
         </scene>
         <!--Home-->
         <scene sceneID="0DH-JT-HlU">
@@ -240,4 +253,7 @@
     <resources>
         <image name="iconTemp" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="449-rR-9cA"/>
+    </inferredMetricsTieBreakers>
 </document>
