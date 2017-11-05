@@ -13,6 +13,10 @@
 		F0187F1A1FAE70E30062BA83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0187F181FAE70E30062BA83 /* LaunchScreen.storyboard */; };
 		F0187F251FAE70E30062BA83 /* ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0187F241FAE70E30062BA83 /* ApplicationTests.swift */; };
 		F0187F301FAE70E30062BA83 /* ApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0187F2F1FAE70E30062BA83 /* ApplicationUITests.swift */; };
+		F04757441FAF9760001A742E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757431FAF9760001A742E /* HomeViewController.swift */; };
+		F04757461FAF97B7001A742E /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757451FAF97B7001A742E /* RoutineViewController.swift */; };
+		F04757481FAF97EA001A742E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757471FAF97EA001A742E /* ProfileViewController.swift */; };
+		F047574A1FAF9972001A742E /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757491FAF9972001A742E /* ActionsViewController.swift */; };
 		F0E3C2421FAE95C800211B73 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E3C2411FAE95C800211B73 /* LoginViewController.swift */; };
 		F0E3C2441FAE99B600211B73 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +51,10 @@
 		F0187F2B1FAE70E30062BA83 /* ApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0187F2F1FAE70E30062BA83 /* ApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUITests.swift; sourceTree = "<group>"; };
 		F0187F311FAE70E30062BA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F04757431FAF9760001A742E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F04757451FAF97B7001A742E /* RoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
+		F04757471FAF97EA001A742E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F04757491FAF9972001A742E /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
 		F0E3C2411FAE95C800211B73 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,8 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				F0187F0D1FAE70E30062BA83 /* AppDelegate.swift */,
-				F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */,
+				F04757491FAF9972001A742E /* ActionsViewController.swift */,
+				F04757471FAF97EA001A742E /* ProfileViewController.swift */,
+				F04757451FAF97B7001A742E /* RoutineViewController.swift */,
+				F04757431FAF9760001A742E /* HomeViewController.swift */,
 				F0E3C2411FAE95C800211B73 /* LoginViewController.swift */,
+				F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */,
 				F0187F131FAE70E30062BA83 /* Main.storyboard */,
 				F0187F161FAE70E30062BA83 /* Assets.xcassets */,
 				F0187F181FAE70E30062BA83 /* LaunchScreen.storyboard */,
@@ -262,9 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F047574A1FAF9972001A742E /* ActionsViewController.swift in Sources */,
+				F04757481FAF97EA001A742E /* ProfileViewController.swift in Sources */,
 				F0E3C2441FAE99B600211B73 /* SignUpViewController.swift in Sources */,
 				F0E3C2421FAE95C800211B73 /* LoginViewController.swift in Sources */,
 				F0187F0E1FAE70E30062BA83 /* AppDelegate.swift in Sources */,
+				F04757441FAF9760001A742E /* HomeViewController.swift in Sources */,
+				F04757461FAF97B7001A742E /* RoutineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
