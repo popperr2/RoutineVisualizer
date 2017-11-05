@@ -56,7 +56,7 @@
                                         </constraints>
                                         <state key="normal" title="LOG IN"/>
                                         <connections>
-                                            <segue destination="5w9-sS-8cm" kind="presentation" id="gGk-5g-STI"/>
+                                            <segue destination="aKd-1O-XUl" kind="presentation" id="gGk-5g-STI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -131,7 +131,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="5w9-sS-8cm" kind="presentation" id="449-rR-9cA"/>
+                                    <segue destination="aKd-1O-XUl" kind="presentation" id="449-rR-9cA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,111 +149,16 @@
             </objects>
             <point key="canvasLocation" x="-202.40000000000001" y="360.59113300492612"/>
         </scene>
-        <!--Routines-->
-        <scene sceneID="GVY-Wg-EPZ">
+        <!--TabBarID-->
+        <scene sceneID="uCI-RQ-cPL">
             <objects>
-                <viewController title="Routines" id="JYR-dk-Aph" customClass="RoutineViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zd2-nC-26S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Htl-ee-b1x"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Routines" id="Y1t-6N-Rh3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nw5-1i-Rr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2082" y="-451"/>
-        </scene>
-        <!--Actions-->
-        <scene sceneID="18k-h2-dNK">
-            <objects>
-                <viewController title="Actions" id="9pX-3l-v0j" customClass="ActionsViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BIo-ZE-to7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="aIi-pi-jHK"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Actions" id="0VH-nz-CKH"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jMe-ME-YtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2081" y="223"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="JTH-Ie-fYh">
-            <objects>
-                <viewController title="Profile" id="HJa-W5-qRo" customClass="ProfileViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kw9-EJ-Sf1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0d-3N-MRm">
-                                <rect key="frame" x="156.66666666666666" y="371" width="62" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="5nx-6B-box"/>
-                                </constraints>
-                                <state key="normal" title="LOGOUT"/>
-                                <connections>
-                                    <segue destination="0QZ-ZJ-Mmd" kind="presentation" id="bym-fZ-dNT"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="n0d-3N-MRm" firstAttribute="centerX" secondItem="kw9-EJ-Sf1" secondAttribute="centerX" id="aBd-rv-2t0"/>
-                            <constraint firstItem="n0d-3N-MRm" firstAttribute="centerY" secondItem="kw9-EJ-Sf1" secondAttribute="centerY" id="zXd-9h-czZ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="2X3-r1-HuP"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="ZG5-vl-ETe"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dGe-7X-R1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2080.8000000000002" y="865.27093596059115"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="0DH-JT-HlU">
-            <objects>
-                <viewController title="Home" id="wcu-PL-FuM" customClass="HomeViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="X5O-MT-9KC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="uFO-qo-e2M"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="iconTemp" id="L3x-bO-fy7"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b4N-ZJ-g4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2081" y="-1118"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="aBd-GG-cUs">
-            <objects>
-                <tabBarController id="5w9-sS-8cm" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fqE-u1-GSD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="wcu-PL-FuM" kind="relationship" relationship="viewControllers" id="IoB-hV-Nfl"/>
-                        <segue destination="JYR-dk-Aph" kind="relationship" relationship="viewControllers" id="pif-Ze-GZl"/>
-                        <segue destination="9pX-3l-v0j" kind="relationship" relationship="viewControllers" id="Jqx-vS-7iJ"/>
-                        <segue destination="HJa-W5-qRo" kind="relationship" relationship="viewControllers" id="vkw-9c-bzl"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ht-NF-cAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBarID" id="aKd-1O-XUl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmA-d1-k4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="954" y="-380"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="iconTemp" width="30" height="30"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="449-rR-9cA"/>
+        <segue reference="gGk-5g-STI"/>
     </inferredMetricsTieBreakers>
 </document>
