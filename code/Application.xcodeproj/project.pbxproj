@@ -17,6 +17,10 @@
 		F04757461FAF97B7001A742E /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757451FAF97B7001A742E /* RoutineViewController.swift */; };
 		F04757481FAF97EA001A742E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757471FAF97EA001A742E /* ProfileViewController.swift */; };
 		F047574A1FAF9972001A742E /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757491FAF9972001A742E /* ActionsViewController.swift */; };
+		F05AD0931FC61FBF00AB1CF3 /* RoutineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AD0921FC61FBF00AB1CF3 /* RoutineAction.swift */; };
+		F05AD0951FC6202800AB1CF3 /* RoutineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AD0941FC6202800AB1CF3 /* RoutineStep.swift */; };
+		F05AD0971FC629FF00AB1CF3 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AD0961FC629FF00AB1CF3 /* Routine.swift */; };
+		F05AD0991FC62B7D00AB1CF3 /* DailySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AD0981FC62B7D00AB1CF3 /* DailySchedule.swift */; };
 		F081B33E1FAFA6B000659B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081B33D1FAFA6B000659B11 /* Main.storyboard */; };
 		F081B3401FAFAC7700659B11 /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081B33F1FAFAC7700659B11 /* Today.storyboard */; };
 		F081B3421FAFACB900659B11 /* Routines.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081B3411FAFACB900659B11 /* Routines.storyboard */; };
@@ -60,6 +64,10 @@
 		F04757451FAF97B7001A742E /* RoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
 		F04757471FAF97EA001A742E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F04757491FAF9972001A742E /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
+		F05AD0921FC61FBF00AB1CF3 /* RoutineAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineAction.swift; sourceTree = "<group>"; };
+		F05AD0941FC6202800AB1CF3 /* RoutineStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineStep.swift; sourceTree = "<group>"; };
+		F05AD0961FC629FF00AB1CF3 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		F05AD0981FC62B7D00AB1CF3 /* DailySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySchedule.swift; sourceTree = "<group>"; };
 		F081B33D1FAFA6B000659B11 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F081B33F1FAFAC7700659B11 /* Today.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
 		F081B3411FAFACB900659B11 /* Routines.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Routines.storyboard; sourceTree = "<group>"; };
@@ -119,8 +127,8 @@
 			children = (
 				F0187F0D1FAE70E30062BA83 /* AppDelegate.swift */,
 				F04757491FAF9972001A742E /* ActionsViewController.swift */,
-				F04757471FAF97EA001A742E /* ProfileViewController.swift */,
 				F04757451FAF97B7001A742E /* RoutineViewController.swift */,
+				F04757471FAF97EA001A742E /* ProfileViewController.swift */,
 				F04757431FAF9760001A742E /* HomeViewController.swift */,
 				F0E3C2411FAE95C800211B73 /* LoginViewController.swift */,
 				F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */,
@@ -131,6 +139,10 @@
 				F081B33F1FAFAC7700659B11 /* Today.storyboard */,
 				F081B3411FAFACB900659B11 /* Routines.storyboard */,
 				F081B3431FAFACF800659B11 /* Actions.storyboard */,
+				F05AD0981FC62B7D00AB1CF3 /* DailySchedule.swift */,
+				F05AD0961FC629FF00AB1CF3 /* Routine.swift */,
+				F05AD0921FC61FBF00AB1CF3 /* RoutineAction.swift */,
+				F05AD0941FC6202800AB1CF3 /* RoutineStep.swift */,
 				F0187F161FAE70E30062BA83 /* Assets.xcassets */,
 				F0187F1B1FAE70E30062BA83 /* Info.plist */,
 			);
@@ -294,11 +306,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F05AD0971FC629FF00AB1CF3 /* Routine.swift in Sources */,
 				F047574A1FAF9972001A742E /* ActionsViewController.swift in Sources */,
 				F04757481FAF97EA001A742E /* ProfileViewController.swift in Sources */,
 				F0E3C2441FAE99B600211B73 /* SignUpViewController.swift in Sources */,
+				F05AD0951FC6202800AB1CF3 /* RoutineStep.swift in Sources */,
 				F0E3C2421FAE95C800211B73 /* LoginViewController.swift in Sources */,
 				F0187F0E1FAE70E30062BA83 /* AppDelegate.swift in Sources */,
+				F05AD0991FC62B7D00AB1CF3 /* DailySchedule.swift in Sources */,
+				F05AD0931FC61FBF00AB1CF3 /* RoutineAction.swift in Sources */,
 				F04757441FAF9760001A742E /* HomeViewController.swift in Sources */,
 				F04757461FAF97B7001A742E /* RoutineViewController.swift in Sources */,
 			);
