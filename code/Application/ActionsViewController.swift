@@ -11,6 +11,7 @@
 
 import UIKit
 
+// Testing Functionality
 class ActionsViewController: UIViewController
 {
     override func viewDidLoad()
@@ -19,9 +20,16 @@ class ActionsViewController: UIViewController
         // Do any additional setup after loading the view.
         //view.backgroundColor = UIColor.blue;  // Change the ViewController background color
         
-        // Try to get routinestep to appear
+        // Try to get routinestep to appear and be able to scroll
+        // Make routinestep object and set properties
         let myRoutineStep = RoutineStep()
-        myRoutineStep.stepDescription = "Example"
-        myRoutineStep.stepImage = nil
+        myRoutineStep.stepDescription = "ExampleText ExampleText ExampleText"
+        myRoutineStep.stepImage = #imageLiteral(resourceName: "stepImageTemp1")
+        
+        // Draw it onto the viewcontroller
+        let imageView = UIImageView(image: myRoutineStep.stepImage)
+        
+        view.addSubview(imageView)
+        
     }
 }

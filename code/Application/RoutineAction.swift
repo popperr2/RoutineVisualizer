@@ -16,39 +16,11 @@ class RoutineAction
 {
     // Class Variables
     public var actionName: String!                      // Name of the Action
-    {
-        get
-        {
-            return self.actionName
-        }
-        set
-        {
-            self.actionName = newValue
-        }
-    }
     public var actionMainStep: RoutineStep!             // Main Step gets displayed under "Routine View"
     public var actionSubSteps: [RoutineStep] = []       // Substeps that get displayed under "Action View"
     public var actionTime: Float?                       // How long does the action take to do
-    {
-        get
-        {
-            return self.actionTime
-        }
-        set
-        {
-            self.actionTime = newValue
-        }
-    }
     public var isComplete: Bool!                      // Is the action completed
-    {
-        get
-        {
-            return self.isComplete
-        }
-        set
-        {
-            self.isComplete = newValue
-        }
-    }
+    
+    // Class Methods
     
 }

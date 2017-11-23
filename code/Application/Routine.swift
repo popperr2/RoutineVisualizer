@@ -19,30 +19,10 @@ class Routine
 {
     // Class Variables
     public var routineName: String!                     // The name of this routine.
-    {
-        get
-        {
-            return self.routineName
-        }
-        set
-        {
-            self.routineName = newValue
-        }
-    }
     public var routineActions: [RoutineAction] = []     // The actions that make up the routine
     public var routineTag: String?                      // The tag of the routine
     public var routineTime: Float?                      // The time of the routine
     public var isComplete: Bool!                        // Status of if it's done or not
-    {
-        get
-        {
-            return self.isComplete
-        }
-        set
-        {
-            self.isComplete = newValue
-        }
-    }
     
     // Class Methods
     

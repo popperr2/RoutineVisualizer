@@ -18,23 +18,7 @@ class DailySchedule
     public var isEmpty: Bool!                   // Does the schedule contain routines?
     public var dailyRoutines: [Routine] = []    // Routines in the schedule
     public var dailyTime: Float?                // Time to do daily schedule
-    {
-        get
-        {
-            return self.dailyTime
-        }
-    }
     public var isComplete: Bool!               // Status of Routine
-    {
-        get
-        {
-            return self.isComplete
-        }
-        set
-        {
-            self.isComplete = newValue
-        }
-    }
     
     // Class Methods
     
