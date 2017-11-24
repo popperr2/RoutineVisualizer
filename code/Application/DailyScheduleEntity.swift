@@ -11,6 +11,7 @@
 
 
 // This is a table that makes up the daily schedule.  It is made up of Routine identifiers.
+
 import Foundation
 import SQLite
 
@@ -46,10 +47,10 @@ class DailyScheduleEntity
         }
     }
     
-    func toString(schedule: Row)
+    func toString(routine: Row)
     {
         print   ("""
-                Daily Schedule Details.  Name = \(schedule[self.routineName])
+                Daily Schedule Details.  Name = \(routine[self.routineName])
                 """)
     }
     

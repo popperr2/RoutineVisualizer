@@ -13,7 +13,7 @@
         <!--Today-->
         <scene sceneID="0DH-JT-HlU">
             <objects>
-                <viewController title="Today" id="wcu-PL-FuM" customClass="HomeViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Today" id="wcu-PL-FuM" customClass="DailyScheduleViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X5O-MT-9KC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

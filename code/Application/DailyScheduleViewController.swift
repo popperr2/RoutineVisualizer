@@ -10,13 +10,24 @@
  */
 
 import UIKit
+import SQLite
 
-class HomeViewController: UIViewController
+class DailyScheduleViewController: UIViewController
 {
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Insert a Routine Identifier into the table and then print the table
+        let routine1 = DailyScheduleEntity.shared.insert(name: "Routine1IGuess")
+        
+        if let dailyScheduleQuery: AnySequence<Row> = DailyScheduleEntity.shared.queryAll()
+        {
+            for eachRoutine in dailyScheduleQuery {
+                DailyScheduleEntity.shared.toString(routine: eachRoutine)
+            }
+        }
     }
 }
