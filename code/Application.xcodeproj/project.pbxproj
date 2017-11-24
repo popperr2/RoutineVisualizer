@@ -19,15 +19,17 @@
 		F04757461FAF97B7001A742E /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757451FAF97B7001A742E /* RoutineViewController.swift */; };
 		F04757481FAF97EA001A742E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757471FAF97EA001A742E /* ProfileViewController.swift */; };
 		F047574A1FAF9972001A742E /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04757491FAF9972001A742E /* ActionsViewController.swift */; };
+		F0595DDC1FC892D6003BFE1A /* DailyScheduleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0595DDB1FC892D6003BFE1A /* DailyScheduleEntity.swift */; };
 		F05AD0931FC61FBF00AB1CF3 /* RoutineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AD0921FC61FBF00AB1CF3 /* RoutineAction.swift */; };
-		F05AD0951FC6202800AB1CF3 /* RoutineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AD0941FC6202800AB1CF3 /* RoutineStep.swift */; };
 		F05AD0971FC629FF00AB1CF3 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AD0961FC629FF00AB1CF3 /* Routine.swift */; };
 		F05AD0991FC62B7D00AB1CF3 /* DailySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AD0981FC62B7D00AB1CF3 /* DailySchedule.swift */; };
+		F05B89FA1FC886DD00ABC7F5 /* ActionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05B89F91FC886DD00ABC7F5 /* ActionsEntity.swift */; };
 		F081B33E1FAFA6B000659B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081B33D1FAFA6B000659B11 /* Main.storyboard */; };
 		F081B3401FAFAC7700659B11 /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081B33F1FAFAC7700659B11 /* Today.storyboard */; };
 		F081B3421FAFACB900659B11 /* Routines.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081B3411FAFACB900659B11 /* Routines.storyboard */; };
 		F081B3441FAFACF800659B11 /* Actions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081B3431FAFACF800659B11 /* Actions.storyboard */; };
 		F081B3461FAFAD1D00659B11 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081B3451FAFAD1D00659B11 /* Profile.storyboard */; };
+		F0B2B2E21FC881EC00F0B724 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B2B2E11FC881EC00F0B724 /* Database.swift */; };
 		F0E3C2421FAE95C800211B73 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E3C2411FAE95C800211B73 /* LoginViewController.swift */; };
 		F0E3C2441FAE99B600211B73 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */; };
 		F36A2E67FC5AB057F2B1E4E9 /* Pods_ApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604CF08DA5D2B2C0EAE02020 /* Pods_ApplicationUITests.framework */; };
@@ -76,15 +78,17 @@
 		F04757451FAF97B7001A742E /* RoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
 		F04757471FAF97EA001A742E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F04757491FAF9972001A742E /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
+		F0595DDB1FC892D6003BFE1A /* DailyScheduleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleEntity.swift; sourceTree = "<group>"; };
 		F05AD0921FC61FBF00AB1CF3 /* RoutineAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineAction.swift; sourceTree = "<group>"; };
-		F05AD0941FC6202800AB1CF3 /* RoutineStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineStep.swift; sourceTree = "<group>"; };
 		F05AD0961FC629FF00AB1CF3 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		F05AD0981FC62B7D00AB1CF3 /* DailySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySchedule.swift; sourceTree = "<group>"; };
+		F05B89F91FC886DD00ABC7F5 /* ActionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsEntity.swift; sourceTree = "<group>"; };
 		F081B33D1FAFA6B000659B11 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F081B33F1FAFAC7700659B11 /* Today.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
 		F081B3411FAFACB900659B11 /* Routines.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Routines.storyboard; sourceTree = "<group>"; };
 		F081B3431FAFACF800659B11 /* Actions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Actions.storyboard; sourceTree = "<group>"; };
 		F081B3451FAFAD1D00659B11 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		F0B2B2E11FC881EC00F0B724 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		F0E3C2411FAE95C800211B73 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +176,9 @@
 				F04757431FAF9760001A742E /* HomeViewController.swift */,
 				F0E3C2411FAE95C800211B73 /* LoginViewController.swift */,
 				F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */,
+				F0B2B2E11FC881EC00F0B724 /* Database.swift */,
+				F05B89F91FC886DD00ABC7F5 /* ActionsEntity.swift */,
+				F0595DDB1FC892D6003BFE1A /* DailyScheduleEntity.swift */,
 				F0187F181FAE70E30062BA83 /* LaunchScreen.storyboard */,
 				F0187F131FAE70E30062BA83 /* Start.storyboard */,
 				F081B33D1FAFA6B000659B11 /* Main.storyboard */,
@@ -182,7 +189,6 @@
 				F05AD0981FC62B7D00AB1CF3 /* DailySchedule.swift */,
 				F05AD0961FC629FF00AB1CF3 /* Routine.swift */,
 				F05AD0921FC61FBF00AB1CF3 /* RoutineAction.swift */,
-				F05AD0941FC6202800AB1CF3 /* RoutineStep.swift */,
 				F0187F161FAE70E30062BA83 /* Assets.xcassets */,
 				F0187F1B1FAE70E30062BA83 /* Info.plist */,
 			);
@@ -508,13 +514,15 @@
 				F05AD0971FC629FF00AB1CF3 /* Routine.swift in Sources */,
 				F047574A1FAF9972001A742E /* ActionsViewController.swift in Sources */,
 				F04757481FAF97EA001A742E /* ProfileViewController.swift in Sources */,
+				F0595DDC1FC892D6003BFE1A /* DailyScheduleEntity.swift in Sources */,
 				F0E3C2441FAE99B600211B73 /* SignUpViewController.swift in Sources */,
-				F05AD0951FC6202800AB1CF3 /* RoutineStep.swift in Sources */,
 				F0E3C2421FAE95C800211B73 /* LoginViewController.swift in Sources */,
+				F0B2B2E21FC881EC00F0B724 /* Database.swift in Sources */,
 				F0187F0E1FAE70E30062BA83 /* AppDelegate.swift in Sources */,
 				F05AD0991FC62B7D00AB1CF3 /* DailySchedule.swift in Sources */,
 				F05AD0931FC61FBF00AB1CF3 /* RoutineAction.swift in Sources */,
 				F04757441FAF9760001A742E /* HomeViewController.swift in Sources */,
+				F05B89FA1FC886DD00ABC7F5 /* ActionsEntity.swift in Sources */,
 				F04757461FAF97B7001A742E /* RoutineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

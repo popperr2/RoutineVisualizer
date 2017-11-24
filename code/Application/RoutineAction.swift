@@ -16,8 +16,6 @@ class RoutineAction
 {
     // Class Variables
     public var actionName: String!                      // Name of the Action
-    public var actionMainStep: RoutineStep!             // Main Step gets displayed under "Routine View"
-    public var actionSubSteps: [RoutineStep] = []       // Substeps that get displayed under "Action View"
     public var actionTime: Float?                       // How long does the action take to do
     public var isComplete: Bool!                      // Is the action completed
     

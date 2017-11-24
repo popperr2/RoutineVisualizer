@@ -19,14 +19,5 @@ class DailySchedule
     public var dailyRoutines: [Routine] = []    // Routines in the schedule
     public var dailyTime: Float?                // Time to do daily schedule
     public var isComplete: Bool!               // Status of Routine
-    
-    // Class Methods
-    
-    // Calculate Daily Time
-    
-    // Add Daily Routines
-    
-    // Delete Daily Routines
-    
 }
 
