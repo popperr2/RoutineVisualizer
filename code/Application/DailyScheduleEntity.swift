@@ -50,7 +50,8 @@ class DailyScheduleEntity
     func toString(routine: Row)
     {
         print   ("""
-                Daily Schedule Details.  Name = \(routine[self.routineName])
+                Daily Schedule Details. id = \(routine[self.id]),
+                Name = \(routine[self.routineName])
                 """)
     }
     
@@ -68,6 +69,8 @@ class DailyScheduleEntity
             return nil
         }
     }
+    
+    //https://www.youtube.com/watch?v=q-bRh46eeUY
     
     // Query / Find all records in tblDailySchedule
     func queryAll() -> AnySequence<Row>?

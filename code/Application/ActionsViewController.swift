@@ -46,6 +46,7 @@ class ActionsViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.delegate = self
         collectionView?.dataSource = self
+        
     }
     
     // Collection View Data Source:  Controls the number of cells in collection view

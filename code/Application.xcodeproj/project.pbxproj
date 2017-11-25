@@ -28,6 +28,8 @@
 		F0B2B2E21FC881EC00F0B724 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B2B2E11FC881EC00F0B724 /* Database.swift */; };
 		F0E3C2421FAE95C800211B73 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E3C2411FAE95C800211B73 /* LoginViewController.swift */; };
 		F0E3C2441FAE99B600211B73 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */; };
+		F0F9357D1FC9FDC70098941A /* RoutineDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9357C1FC9FDC70098941A /* RoutineDatabase.swift */; };
+		F0F9357F1FCA02B70098941A /* RoutineViewControllerAddNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9357E1FCA02B70098941A /* RoutineViewControllerAddNew.swift */; };
 		F36A2E67FC5AB057F2B1E4E9 /* Pods_ApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604CF08DA5D2B2C0EAE02020 /* Pods_ApplicationUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +85,8 @@
 		F0B2B2E11FC881EC00F0B724 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		F0E3C2411FAE95C800211B73 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F0F9357C1FC9FDC70098941A /* RoutineDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDatabase.swift; sourceTree = "<group>"; };
+		F0F9357E1FCA02B70098941A /* RoutineViewControllerAddNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewControllerAddNew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,12 +168,14 @@
 				F0187F0D1FAE70E30062BA83 /* AppDelegate.swift */,
 				F04757491FAF9972001A742E /* ActionsViewController.swift */,
 				F04757451FAF97B7001A742E /* RoutineViewController.swift */,
+				F0F9357E1FCA02B70098941A /* RoutineViewControllerAddNew.swift */,
 				F04757471FAF97EA001A742E /* ProfileViewController.swift */,
 				F04757431FAF9760001A742E /* DailyScheduleViewController.swift */,
 				F0E3C2411FAE95C800211B73 /* LoginViewController.swift */,
 				F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */,
 				F0B2B2E11FC881EC00F0B724 /* Database.swift */,
 				F0595DDB1FC892D6003BFE1A /* DailyScheduleEntity.swift */,
+				F0F9357C1FC9FDC70098941A /* RoutineDatabase.swift */,
 				F0187F181FAE70E30062BA83 /* LaunchScreen.storyboard */,
 				F0187F131FAE70E30062BA83 /* Start.storyboard */,
 				F081B33D1FAFA6B000659B11 /* Main.storyboard */,
@@ -500,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F047574A1FAF9972001A742E /* ActionsViewController.swift in Sources */,
+				F0F9357D1FC9FDC70098941A /* RoutineDatabase.swift in Sources */,
 				F04757481FAF97EA001A742E /* ProfileViewController.swift in Sources */,
 				F0595DDC1FC892D6003BFE1A /* DailyScheduleEntity.swift in Sources */,
 				F0E3C2441FAE99B600211B73 /* SignUpViewController.swift in Sources */,
@@ -508,6 +515,7 @@
 				F0187F0E1FAE70E30062BA83 /* AppDelegate.swift in Sources */,
 				F04757441FAF9760001A742E /* DailyScheduleViewController.swift in Sources */,
 				F04757461FAF97B7001A742E /* RoutineViewController.swift in Sources */,
+				F0F9357F1FCA02B70098941A /* RoutineViewControllerAddNew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
