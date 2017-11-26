@@ -71,7 +71,7 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
     // Collection View Data Source:  Controls the number of cells in collection view
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        // Reach into SQLite Table and figure out how many steps there are in the selected routine.
+        // Reach into SQLite Table and figure out how many routines in total exist
         var temp = 0
         if let routineDatabaseQuery: AnySequence<Row> = RoutineDatabase.shared.queryAll()
         {
@@ -107,7 +107,7 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
         cellTag.text = RoutineDatabase.shared.queryTag(id: Int64(indexPath.row) + 1)
         cell.contentView.addSubview(cellTag)
         
-        // Add image
+        // Add Image using SQL identifier
         
         return cell
     }

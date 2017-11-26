@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25FD0F49C6F15E9F5FDA6D95 /* Pods_ApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F09A2C1B4583AD7433BE4B /* Pods_ApplicationTests.framework */; };
 		ED96E12CDB1C2BAC37E5DBF9 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C415168E1B4A6C0B75FEA56E /* Pods_Application.framework */; };
+		F0149D701FCA46A100899FCD /* ActionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0149D6F1FCA46A100899FCD /* ActionDatabase.swift */; };
 		F0187F0E1FAE70E30062BA83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0187F0D1FAE70E30062BA83 /* AppDelegate.swift */; };
 		F0187F151FAE70E30062BA83 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0187F131FAE70E30062BA83 /* Start.storyboard */; };
 		F0187F171FAE70E30062BA83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0187F161FAE70E30062BA83 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		9A8B5E630AA95FB51D1544D3 /* Pods-ApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApplicationUITests/Pods-ApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB40E2413069A562C237AAF1 /* Pods-ApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApplicationTests/Pods-ApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C415168E1B4A6C0B75FEA56E /* Pods_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0149D6F1FCA46A100899FCD /* ActionDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDatabase.swift; sourceTree = "<group>"; };
 		F0187F0A1FAE70E30062BA83 /* Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Application.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0187F0D1FAE70E30062BA83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0187F141FAE70E30062BA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Start.storyboard; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				F0E3C2431FAE99B600211B73 /* SignUpViewController.swift */,
 				F0B2B2E11FC881EC00F0B724 /* Database.swift */,
 				F0595DDB1FC892D6003BFE1A /* DailyScheduleEntity.swift */,
+				F0149D6F1FCA46A100899FCD /* ActionDatabase.swift */,
 				F0F9357C1FC9FDC70098941A /* RoutineDatabase.swift */,
 				F0187F181FAE70E30062BA83 /* LaunchScreen.storyboard */,
 				F0187F131FAE70E30062BA83 /* Start.storyboard */,
@@ -515,6 +518,7 @@
 				F0187F0E1FAE70E30062BA83 /* AppDelegate.swift in Sources */,
 				F04757441FAF9760001A742E /* DailyScheduleViewController.swift in Sources */,
 				F04757461FAF97B7001A742E /* RoutineViewController.swift in Sources */,
+				F0149D701FCA46A100899FCD /* ActionDatabase.swift in Sources */,
 				F0F9357F1FCA02B70098941A /* RoutineViewControllerAddNew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

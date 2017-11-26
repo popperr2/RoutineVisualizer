@@ -10,6 +10,7 @@
  */
 
 import UIKit
+import SQLite
 
 class ActionsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
@@ -23,13 +24,18 @@ class ActionsViewController: UIViewController, UICollectionViewDelegate, UIColle
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
         
         // Set up CollectionView
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
         collectionView?.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionView!)
         collectionView?.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-         collectionView?.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        collectionView?.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         collectionView?.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         collectionView?.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         collectionView?.backgroundColor = UIColor.white
@@ -47,19 +53,41 @@ class ActionsViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView?.delegate = self
         collectionView?.dataSource = self
         
+        setupDatabases()
+    }
+    
+    func setupDatabases()
+    {
+        if let actionDatabaseQuery: AnySequence<Row> = ActionDatabase.shared.queryAll()
+        {
+            for eachAction in actionDatabaseQuery
+            {
+                // print
+                ActionDatabase.shared.toString(action: eachAction)
+            }
+        }
     }
     
     // Collection View Data Source:  Controls the number of cells in collection view
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        // The Number of Cells there are in the collection view
-        // Reach into SQLite and figure out how many steps there are in the selected routine.
-        return 5
+        var temp = 0
+        
+        if let actionDatabaseQuery: AnySequence<Row> = ActionDatabase.shared.queryAll()
+        {
+            for eachAction in actionDatabaseQuery
+            {
+                temp = temp + 1
+            }
+        }
+        
+        return temp
     }
     
     // Defines contents of cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
+        // Indexpath.row gets what UI element you're on
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
         // Cell Setup
@@ -72,7 +100,7 @@ class ActionsViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         // Add Label / Text
         let cellTitle = UILabel(frame: CGRect(x: 150, y: 0, width: cell.bounds.size.width, height: 40))
-        cellTitle.text = "Smoogle"
+        cellTitle.text = ActionDatabase.shared.queryName(id: Int64(indexPath.row) + 1)
         cell.contentView.addSubview(cellTitle)
         
         return cell
