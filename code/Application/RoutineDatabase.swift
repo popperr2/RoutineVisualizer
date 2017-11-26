@@ -26,7 +26,7 @@ class RoutineDatabase
     
     private init()
     {
-        // Create the table if it oesn't exist already
+        // Create the table if it doesn't exist already
         do
         {
             if let connection = Database.shared.connection
@@ -82,5 +82,45 @@ class RoutineDatabase
             print ("Cannot query all of table RoutineDatabase.  Error is: \(nserror), \(nserror.userInfo)")
             return nil
         }
+    }
+    
+    // Func QueryID
+    
+    func queryName(id: Int64) -> String?
+    {
+        do
+        {
+            let thing: AnySequence<Row> = (try Database.shared.connection?.prepare(self.tblRoutineDatabase.filter(self.id == id)))!
+            
+            for eachRoutine in thing {
+                // print
+                return eachRoutine[self.routineName]
+            }
+            
+        } catch {
+            let nserror = error as NSError
+            print ("Cannot query name of table RoutineDatabase.  Error is: \(nserror), \(nserror.userInfo)")
+            return "nil"
+        }
+        return "nil"
+    }
+    
+    func queryTag(id: Int64) -> String?
+    {
+        do
+        {
+            let thing: AnySequence<Row> = (try Database.shared.connection?.prepare(self.tblRoutineDatabase.filter(self.id == id)))!
+            
+            for eachRoutine in thing {
+                // print
+                return eachRoutine[self.routineTag]
+            }
+            
+        } catch {
+            let nserror = error as NSError
+            print ("Cannot query name of table RoutineDatabase.  Error is: \(nserror), \(nserror.userInfo)")
+            return "nil"
+        }
+        return "nil"
     }
 }

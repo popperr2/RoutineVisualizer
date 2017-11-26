@@ -19,11 +19,17 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
     let cellId = "ExampleCell"                      // An ID used by the cell
     let cellSpacing:CGFloat = 10                    // The amount of spacing between cells
     
-    // View Did Load
+    // Runs the first time the view loads
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    // Runs right before a view is displayed each time
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
         
         // Set up CollectionView
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
@@ -53,12 +59,10 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func setupDatabases()
     {
-        let routine1 = RoutineDatabase.shared.insert(name: "Routine1Name", tag: "morningexample")
-        
-        // print
         if let routineDatabaseQuery: AnySequence<Row> = RoutineDatabase.shared.queryAll()
         {
             for eachRoutine in routineDatabaseQuery {
+                // print
                 RoutineDatabase.shared.toString(routine: eachRoutine)
             }
         }
@@ -67,14 +71,22 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
     // Collection View Data Source:  Controls the number of cells in collection view
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        // The Number of Cells there are in the collection view
-        // Reach into SQLite and figure out how many steps there are in the selected routine.
-        return 2
+        // Reach into SQLite Table and figure out how many steps there are in the selected routine.
+        var temp = 0
+        if let routineDatabaseQuery: AnySequence<Row> = RoutineDatabase.shared.queryAll()
+        {
+            for eachRoutine in routineDatabaseQuery
+            {
+                temp = temp + 1
+            }
+        }
+        return temp
     }
     
     // Defines contents of cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
+        // Indexpath.row gets what UI Element you're on
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
         // Cell Setup
@@ -87,8 +99,15 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         // Add Label / Text
         let cellTitle = UILabel(frame: CGRect(x: 150, y: 0, width: cell.bounds.size.width, height: 40))
-        cellTitle.text = "Smoogle"
+        cellTitle.text = RoutineDatabase.shared.queryName(id: Int64(indexPath.row) + 1)
         cell.contentView.addSubview(cellTitle)
+        
+        // Add Tag
+        let cellTag = UILabel(frame: CGRect(x: 150, y: 20, width: cell.bounds.size.width, height: 40))
+        cellTag.text = RoutineDatabase.shared.queryTag(id: Int64(indexPath.row) + 1)
+        cell.contentView.addSubview(cellTag)
+        
+        // Add image
         
         return cell
     }

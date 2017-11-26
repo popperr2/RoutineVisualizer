@@ -81,6 +81,9 @@
                                     <constraint firstAttribute="height" constant="30" id="0F2-Tk-4so"/>
                                 </constraints>
                                 <state key="normal" title="SUBMIT ROUTINE"/>
+                                <connections>
+                                    <action selector="submitRoutine:" destination="hTZ-xg-SNh" eventType="touchUpInside" id="PYD-ji-iq6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,6 +96,7 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="bcm-iV-BKz" id="J5P-LA-LpA"/>
+                        <outlet property="submissionButton" destination="Tnq-bQ-aXf" id="NTu-6g-Xfb"/>
                         <outlet property="tagTextField" destination="Dd6-Zq-u9V" id="YkV-dt-RRM"/>
                     </connections>
                 </viewController>

@@ -13,9 +13,10 @@ import UIKit
 
 class RoutineViewControllerAddNew: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var tagTextField: UITextField!
-    
+    // Class Variables
+    @IBOutlet weak var nameTextField: UITextField!  // The text field that takes in the User's Input for the Routine Name
+    @IBOutlet weak var tagTextField: UITextField!  // The text field that takes in the User's Input for the Routine Tag
+    @IBOutlet weak var submissionButton: UIButton!  // The Submission button of the information that causes the push to RoutineDatabase table
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +24,20 @@ class RoutineViewControllerAddNew: UIViewController {
         // Do any additional setup after loading the view.
         // Get Text:  nameTextField.text
         
+    }
+    @IBAction func submitRoutine(_ sender: Any)
+    {
+        if nameTextField.text == ""
+        {
+            nameTextField.text = "nil"
+        }
+        if tagTextField.text == ""
+        {
+            tagTextField.text = "nil"
+        }
+        
+        RoutineDatabase.shared.insert(name: nameTextField.text!, tag: tagTextField.text!)
+        
+        navigationController?.popViewController(animated: true)
     }
 }
