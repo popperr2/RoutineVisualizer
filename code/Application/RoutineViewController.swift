@@ -6,7 +6,7 @@
  * Project Description:  A mobile application that allows the user to see their daily schedule in visual form.
  * Filename: RoutineViewController.swift
  * File Description:  This ViewController manages routines and can add new ones.
- * Last Modified On: November 4, 2017
+ * Last Modified On: November 26, 2017
  */
 
 import UIKit
@@ -24,6 +24,8 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
     // Runs right before a view is displayed each time
@@ -83,31 +85,35 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
         return temp
     }
     
-    // Defines contents of cells
+    // Collection View controller
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         // Indexpath.row gets what UI Element you're on
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
+        let cellWidth: CGFloat = cell.contentView.bounds.size.width     // The width of the created cell
+        let cellHeight: CGFloat = cell.contentView.bounds.size.height   // The height of the created cell
+        
         // Cell Setup
         cell.backgroundColor = .green
         
-        // Add Image
-        let cellImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        // Add Image using SQL identifier
+        let cellImageView = UIImageView(frame: CGRect(x: 20, y: (cellHeight / 10), width: cellHeight * 0.8, height: cellHeight * 0.8))
         cellImageView.image = #imageLiteral(resourceName: "stepImageTemp1")
         cell.contentView.addSubview(cellImageView)
         
-        // Add Label / Text
-        let cellTitle = UILabel(frame: CGRect(x: 150, y: 0, width: cell.bounds.size.width, height: 40))
-        cellTitle.text = RoutineDatabase.shared.queryName(id: Int64(indexPath.row) + 1)
+        // Add Routine Name Label
+        let cellTitle = UILabel(frame: CGRect(x: (cellWidth / 2), y: (cellHeight / 10), width: (cellWidth/2) - 2, height: 40))
+        cellTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cellTitle.numberOfLines = 2
+        cellTitle.text = "NAME: \n" + (RoutineDatabase.shared.queryName(id: Int64(indexPath.row) + 1)?.uppercased())!
+        cellTitle.sizeToFit()
         cell.contentView.addSubview(cellTitle)
         
-        // Add Tag
-        let cellTag = UILabel(frame: CGRect(x: 150, y: 20, width: cell.bounds.size.width, height: 40))
-        cellTag.text = RoutineDatabase.shared.queryTag(id: Int64(indexPath.row) + 1)
+        // Add Routine Tag Label
+        let cellTag = UILabel(frame: CGRect(x: (cellWidth / 2), y: cellHeight - 50, width: cell.bounds.size.width, height: 40))
+        cellTag.text = "TAG: " + RoutineDatabase.shared.queryTag(id: Int64(indexPath.row) + 1)!
         cell.contentView.addSubview(cellTag)
-        
-        // Add Image using SQL identifier
         
         return cell
     }

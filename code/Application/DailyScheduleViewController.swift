@@ -22,13 +22,5 @@ class DailyScheduleViewController: UIViewController
         
         // Insert a Routine Identifier into the table and then print the table
         // Saves, so have to delete app every time you run otherwise it adds a second one 
-        let routine1 = DailyScheduleEntity.shared.insert(name: "Routine1IGuess")
-        
-        if let dailyScheduleQuery: AnySequence<Row> = DailyScheduleEntity.shared.queryAll()
-        {
-            for eachRoutine in dailyScheduleQuery {
-                DailyScheduleEntity.shared.toString(routine: eachRoutine)
-            }
-        }
     }
 }
