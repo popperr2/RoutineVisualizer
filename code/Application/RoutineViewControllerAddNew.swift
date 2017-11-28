@@ -15,7 +15,10 @@ import SQLite
 class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     // Class Variables
-    var imageArray = [UIImage(named: "stepImageTemp1"), UIImage(named: "stepImageTemp1"), UIImage(named: "stepImageTemp1"), UIImage(named: "stepImageTemp1"), UIImage(named: "stepImageTemp1"), UIImage(named: "stepImageTemp1"), UIImage(named: "stepImageTemp1"), ]
+    // key: value
+    //var imageArray = [UIImage(named: "stepImageTemp1"), UIImage(named: "stepImageTemp2"), UIImage(named: "stepImageTemp3"), UIImage(named: "stepImageTemp4")]
+    
+    var imageNameArray = ["stepImageTemp1", "stepImageTemp2", "stepImageTemp3", "stepImageTemp4"]
     
     var collectionView: UICollectionView?
     let cellId = "imageCell"
@@ -29,9 +32,7 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        // Get Text:  nameTextField.text
+        // Do something after the view loads
     }
     
     // Runs before a view is displayed
@@ -65,10 +66,12 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
         collectionView?.dataSource = self
     }
     
+    // How many image cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArray.count
+        return imageNameArray.count
     }
     
+    // Create the image cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
@@ -76,10 +79,17 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
         cell.backgroundColor = .black
         
         let cellImageView = UIImageView(frame: CGRect(x:0, y: 0, width: cellWidth, height: cellHeight))
-        cellImageView.image = imageArray[indexPath.row]
+        let imageName = imageNameArray[indexPath.row]
+        cellImageView.image = UIImage(named: imageName)
+        //cellImageView.image = imageArray[indexPath.row]
         cell.contentView.addSubview(cellImageView)
         
         return cell
+    }
+    
+    // Selection Image
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
     
     // Submit the routine that the user selects
@@ -95,7 +105,6 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
         }
         
         RoutineDatabase.shared.insert(name: nameTextField.text!, tag: tagTextField.text!)
-        
         navigationController?.popViewController(animated: true)
     }
 }
