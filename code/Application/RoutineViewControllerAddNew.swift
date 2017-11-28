@@ -15,9 +15,6 @@ import SQLite
 class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     // Class Variables
-    // key: value
-    //var imageArray = [UIImage(named: "stepImageTemp1"), UIImage(named: "stepImageTemp2"), UIImage(named: "stepImageTemp3"), UIImage(named: "stepImageTemp4")]
-    
     var imageNameArray = ["stepImageTemp1", "stepImageTemp2", "stepImageTemp3", "stepImageTemp4"]
     
     var collectionView: UICollectionView?
@@ -25,6 +22,8 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
     let cellSpacing: CGFloat = 10
     let cellWidth: Int = 150
     let cellHeight: Int = 150
+    
+    var selectedImage: String? // What image was selected
     
     @IBOutlet weak var nameTextField: UITextField!  // The text field that takes in the User's Input for the Routine Name
     @IBOutlet weak var tagTextField: UITextField!  // The text field that takes in the User's Input for the Routine Tag
@@ -89,7 +88,22 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
     
     // Selection Image
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 5.0
+        cell?.layer.borderColor = UIColor.red.cgColor
+        
+        // What image is this cell
+        selectedImage = imageNameArray[indexPath.row]
+        
+        // TO DO:  ADD SELECTED IMAGE TO THE DATABASE SO IT'LL DISPLAY ON THE ROUTINE PAGE
+        
+        print(selectedImage)
+    }
+    
+    // Unselect Image
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 0.0
     }
     
     // Submit the routine that the user selects
