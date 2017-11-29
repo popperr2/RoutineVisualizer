@@ -29,7 +29,8 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var tagTextField: UITextField!  // The text field that takes in the User's Input for the Routine Tag
     @IBOutlet weak var submissionButton: UIButton!  // The Submission button of the information that causes the push to RoutineDatabase table
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do something after the view loads
     }
@@ -86,7 +87,7 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
         return cell
     }
     
-    // Selection Image
+    // Select an Image
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderWidth = 5.0
@@ -95,12 +96,10 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
         // What image is this cell
         selectedImage = imageNameArray[indexPath.row]
         
-        // TO DO:  ADD SELECTED IMAGE TO THE DATABASE SO IT'LL DISPLAY ON THE ROUTINE PAGE
-        
-        print(selectedImage)
+        //print(selectedImage)
     }
     
-    // Unselect Image
+    // Unselect an Image when selecting another
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderWidth = 0.0

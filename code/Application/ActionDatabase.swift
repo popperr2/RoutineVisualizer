@@ -9,8 +9,6 @@
  * Last Modified On: November 24, 2017
  */
 
-// This contains the list of stored routines in total (not those just in daily schedule)
-
 import Foundation
 import SQLite
 

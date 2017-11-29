@@ -17,10 +17,5 @@ class DailyScheduleViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
-        // Insert a Routine Identifier into the table and then print the table
-        // Saves, so have to delete app every time you run otherwise it adds a second one 
     }
 }

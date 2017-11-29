@@ -9,8 +9,6 @@
  * Last Modified On: November 24, 2017
  */
 
-// This contains the list of stored routines in total (not those just in daily schedule)
-
 import Foundation
 import SQLite
 
@@ -59,6 +57,30 @@ class RoutineDatabase
                 """)
     }
     
+    // Delete Record
+    // TO DO: This
+    func delete(deleteId: Int64)
+    {
+        do {
+            let deleteRow = tblRoutineDatabase.filter(id == deleteId)
+            //deleteRow.delete()
+            try Database.shared.connection!.run(deleteRow.delete())
+            
+            // Renumber rows
+            // TO DO: Renumber rows
+            let thing: AnySequence<Row> = (try Database.shared.connection?.prepare(self.tblRoutineDatabase.filter(self.id == id)))!
+            
+            /*for (index, eachRoutine) in thing.enumerated()
+            {
+                
+            }*/
+            
+        } catch {
+            let nserror = error as NSError
+            print ("Cannot insert a Routine to the Routine Database.  Error is: \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
     // Insert a routine into the routine total database
     func insert(name: String, tag: String, image: String) -> Int64?
     {
@@ -87,8 +109,54 @@ class RoutineDatabase
         }
     }
     
-    // Func QueryID
+    // Query MaxID
+    func queryMaxId() -> Int64?
+    {
+        do {
+            let thing: AnySequence<Row> = (try Database.shared.connection?.prepare(self.tblRoutineDatabase.order([self.id])))!
+            
+            var temp: Int64 = 0
+            for something in thing
+            {
+                temp = something[self.id]
+            }
+            return temp
+        } catch {
+            let nserror = error as NSError
+            print ("Cannot query all of table RoutineDatabase.  Error is: \(nserror), \(nserror.userInfo)")
+            return nil
+        }
+        return nil
+    }
     
+    func findCorrectId(index: Int) -> Int64?
+    {
+        do {
+            let thing: AnySequence<Row> = (try Database.shared.connection?.prepare(self.tblRoutineDatabase.order([self.id])))!
+            
+            var idToUse: Int64 = 0
+            
+            var i: Int = 0
+            for id in thing
+            {
+                if index == i
+                {
+                    idToUse = id[self.id]
+                    break
+                }
+                i = i + 1
+            }
+            
+            return idToUse
+        } catch {
+            let nserror = error as NSError
+            print ("Cannot query all of table RoutineDatabase.  Error is: \(nserror), \(nserror.userInfo)")
+            return nil
+        }
+        return nil
+    }
+    
+    // Func Query Name
     func queryName(id: Int64) -> String?
     {
         do

@@ -9,9 +9,6 @@
  * Last Modified On: November 24, 2017
  */
 
-
-// This is a table that makes up the daily schedule.  It is made up of Routine identifiers.
-
 import Foundation
 import SQLite
 
