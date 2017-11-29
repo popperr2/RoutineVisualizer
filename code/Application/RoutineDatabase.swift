@@ -23,6 +23,7 @@ class RoutineDatabase
     private let id = Expression<Int64>("id")
     private let routineName = Expression<String>("routineName")
     private let routineTag = Expression<String>("routineTag")
+    private let routineImage = Expression<String>("routineImage")
     
     private init()
     {
@@ -34,6 +35,7 @@ class RoutineDatabase
                 try connection.run(tblRoutineDatabase.create(temporary: false, ifNotExists: true, withoutRowid: false, block: {(table) in table.column(self.id, primaryKey: true)
                     table.column(self.routineName)
                     table.column(self.routineTag)
+                    table.column(self.routineImage)
                 }))
                 print ("Created table tblRoutineDatabase successfully")
             }
@@ -52,16 +54,17 @@ class RoutineDatabase
         print   ("""
                 RoutineDatabase Details.  id = \(routine[self.id]),
                 Name = \(routine[self.routineName]),
-                Tag = \(routine[self.routineTag])
+                Tag = \(routine[self.routineTag]),
+                Image = \(routine[self.routineImage])
                 """)
     }
     
     // Insert a routine into the routine total database
-    func insert(name: String, tag: String) -> Int64?
+    func insert(name: String, tag: String, image: String) -> Int64?
     {
         do
         {
-            let insert = tblRoutineDatabase.insert(self.routineName <- name, self.routineTag <- tag)
+            let insert = tblRoutineDatabase.insert(self.routineName <- name, self.routineTag <- tag, self.routineImage <- image)
             let insertedId = try Database.shared.connection!.run(insert)
             return insertedId
         } catch {
@@ -116,6 +119,23 @@ class RoutineDatabase
                 return eachRoutine[self.routineTag]
             }
             
+        } catch {
+            let nserror = error as NSError
+            print ("Cannot query name of table RoutineDatabase.  Error is: \(nserror), \(nserror.userInfo)")
+            return "nil"
+        }
+        return "nil"
+    }
+    
+    func queryImage(id: Int64) -> String?
+    {
+        do
+        {
+            let thing: AnySequence<Row> = (try Database.shared.connection?.prepare(self.tblRoutineDatabase.filter(self.id == id)))!
+            
+            for eachRoutine in thing {
+                return eachRoutine[self.routineImage]
+            }
         } catch {
             let nserror = error as NSError
             print ("Cannot query name of table RoutineDatabase.  Error is: \(nserror), \(nserror.userInfo)")

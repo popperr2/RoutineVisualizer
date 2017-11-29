@@ -85,7 +85,7 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
         return temp
     }
     
-    // Collection View controller
+    // Collection View controller, creation of contents of cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         // Indexpath.row gets what UI Element you're on
@@ -99,7 +99,8 @@ class RoutineViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         // Add Image using SQL identifier
         let cellImageView = UIImageView(frame: CGRect(x: 20, y: (cellHeight / 10), width: cellHeight * 0.8, height: cellHeight * 0.8))
-        cellImageView.image = #imageLiteral(resourceName: "stepImageTemp1")
+        let imageName: String = RoutineDatabase.shared.queryImage(id: Int64(indexPath.row) + 1)!
+        cellImageView.image = UIImage(named: imageName)
         cell.contentView.addSubview(cellImageView)
         
         // Add Routine Name Label

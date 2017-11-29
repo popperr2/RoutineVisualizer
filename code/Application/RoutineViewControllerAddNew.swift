@@ -118,7 +118,7 @@ class RoutineViewControllerAddNew: UIViewController, UICollectionViewDelegate, U
             tagTextField.text = "nil"
         }
         
-        RoutineDatabase.shared.insert(name: nameTextField.text!, tag: tagTextField.text!)
+        RoutineDatabase.shared.insert(name: nameTextField.text!, tag: tagTextField.text!, image: selectedImage!)
         navigationController?.popViewController(animated: true)
     }
 }
