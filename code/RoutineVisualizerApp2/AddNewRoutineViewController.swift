@@ -23,8 +23,7 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var submitButton: UIButton!
     var selectedImage: String!
     
-    var imageNameArray = ["sun", "moon", "sun", "sun", "moon", "moon", "sun"]
-    var tagArray = ["Morning", "Midday", "Night"]
+    var imageNameArray = ["stepImageTemp1", "stepImageTemp2", "stepImageTemp3", "stepImageTemp4", "sun", "moon"]
     
     // Runs as it is loaded the first time
     override func viewDidLoad()

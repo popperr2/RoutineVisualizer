@@ -125,10 +125,10 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
     {
         if editingStyle == .delete
         {
-            //self.tableView.beginUpdates()
+            // Begin Updates
             routinesArray.remove(at: indexPath.row) // Remove from RoutineArray
             self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.left)
-            //self.tableView.endUpdates()
+            // End Updates
         }
     }
 }

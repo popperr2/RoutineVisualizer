@@ -114,5 +114,31 @@ class VisualizerViewController: UIViewController, UITableViewDelegate, UITableVi
         
         return cell
     }
+    
+    // DELETION Methods
+    // Tells the Tableview that cells can be edited / deleted
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    // Delete cells and update the arrays
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        // Begin Updates
+        routinesArray.remove(at: indexPath.row) // Remove from RoutineArray
+        self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.left)
+        // End Updates
+    }
+    
+    // Customize Delete Swipe Color
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
+    {
+        let deleteButton = UITableViewRowAction(style: .default, title: "Complete!") { (action, indexPath) in self.tableView.dataSource?.tableView!(self.tableView, commit: .delete, forRowAt: indexPath)
+            return
+        }
+        deleteButton.backgroundColor = UIColor(red:0.55, green:0.87, blue:0.51, alpha:1.0)
+        return [deleteButton]
+    }
 }
 
