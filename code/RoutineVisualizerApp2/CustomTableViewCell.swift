@@ -24,6 +24,16 @@ class CustomTableViewCell: UITableViewCell
     var nameLabel: UILabel!
     var tagLabel: UILabel!
     
+    //---------------------------------------------------
+    // Function: init()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableViewCellStyle, the cell style
+    //      input String, the cell identifier
+    //
+    // Pre-Condition:   None
+    // Post-Condition:  Extends UITableViewCell
+    //---------------------------------------------------
     override init(style: UITableViewCellStyle, reuseIdentifier: String?)
     {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -55,16 +65,41 @@ class CustomTableViewCell: UITableViewCell
         tagLabel.backgroundColor = UIColor.white
         contentView.addSubview(tagLabel)    }
     
-    required init?(coder aDecoder: NSCoder) {
+    //---------------------------------------------------
+    // Function: init?()
+    //---------------------------------------------------
+    // Parameters:
+    //      input NSCoder, a decoder
+    //
+    // Pre-Condition:   None
+    // Post-Condition:  Essential method for custom cell
+    //---------------------------------------------------
+    required init?(coder aDecoder: NSCoder)
+    {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //---------------------------------------------------
+    // Function: prepareForReuse()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   None
+    // Post-Condition:  Cell can be reused by methods
+    //---------------------------------------------------
     override func prepareForReuse()
     {
         super.prepareForReuse()
     }
     
-    // Set the sizes of the subviews
+    //---------------------------------------------------
+    // Function: layoutSubviews()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   None
+    // Post-Condition:  Setup subviews frame's for custom cell
+    //---------------------------------------------------
     override func layoutSubviews()
     {
         super.layoutSubviews()

@@ -25,7 +25,14 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
     
     var imageNameArray = ["stepImageTemp1", "stepImageTemp2", "stepImageTemp3", "stepImageTemp4", "sun", "moon"]
     
-    // Runs as it is loaded the first time
+    //---------------------------------------------------
+    // Function: viewDidLoad()
+    //---------------------------------------------------
+    // Parameters: None
+    //
+    // Pre-Condition: view has been loaded by AppDelegate
+    // Post-Condition: The collectionview is created upon load
+    //---------------------------------------------------s
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -61,7 +68,16 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
         // TO DO: Set Up Routine Actions Selection
     }
     
-    // User clicks Submission Button
+    //---------------------------------------------------
+    // Function: submitButtonPress()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Any, a button to press
+    //
+    // Pre-Condition: view has appeared and fields correct
+    // Post-Condition: If fields are correct, input new
+    //                  routine to SQLite Database
+    //---------------------------------------------------
     @IBAction func submitButtonPress(_ sender: Any)
     {
         print (selectedImage)
@@ -103,13 +119,34 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     // COLLECTION VIEW FUNCTIONS
-    // Determines how many collection view cells to make
+    
+    //---------------------------------------------------
+    // Function: collectionView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UICollectionView, collectionView
+    //      input Int, number of items in section
+    //
+    // Pre-Condition: collectionView exists
+    // Post-Condition: Assigns amount of collectionView
+    //                  cells to imageNameArray.count
+    //---------------------------------------------------
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return imageNameArray.count
     }
     
-    // Create Image Cells in collection view
+    //---------------------------------------------------
+    // Function: collectionView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UICollectionView, collectionView
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition: collectionView exists
+    // Post-Condition: Creates the cells in the collection
+    //                  view by returning a collectionViewCell
+    //---------------------------------------------------
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectioncell", for: indexPath)
@@ -123,7 +160,17 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
         return cell
     }
     
-    // When selecting a cell in collection view
+    //---------------------------------------------------
+    // Function: collectionView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UICollectionView, collectionView
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition: collectionView exists
+    // Post-Condition: Allows user to select an image
+    //                  and displays this in the UI
+    //---------------------------------------------------
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         let cell = collectionView.cellForItem(at: indexPath)
@@ -135,7 +182,17 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
         selectedImage = imageNameArray[indexPath.row]
     }
     
-    // Unselect Image when selecting another image
+    //---------------------------------------------------
+    // Function: collectionView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UICollectionView, collectionView
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition: collectionView exists
+    // Post-Condition: Makes all cells deselect
+    //                  if one other cell is selected
+    //---------------------------------------------------
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath)
     {
         let cell = collectionView.cellForItem(at: indexPath)

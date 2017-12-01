@@ -31,7 +31,15 @@ class RoutineManagerDatabase
     private let actionImageName = Expression<String>("actionImageName")
     private let actionDescripton = Expression<String>("actionDescription")
     
-    // Intialize table if not already done
+    //---------------------------------------------------
+    // Function: init()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   Database exists
+    // Post-Condition:  Create table for RoutineManagerData
+    //                  if does not already exist.
+    //---------------------------------------------------
     private init()
     {
         // Create the table if it doesn't exist already
@@ -52,7 +60,16 @@ class RoutineManagerDatabase
         }
     }
     
-    // Print out contents of database
+    //---------------------------------------------------
+    // Function: toString()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Row, a row in the table
+    //
+    // Pre-Condition:   A row exists in the table
+    // Post-Condition:  Print out the contents of selected
+    //                  Row in String form
+    //---------------------------------------------------
     func toString(routine: Row)
     {
         print   ("""
@@ -64,7 +81,19 @@ class RoutineManagerDatabase
                 """)
     }
     
-    // Insert a routine into tblRoutineManagerDatabase
+    //---------------------------------------------------
+    // Function: insert()
+    //---------------------------------------------------
+    // Parameters:
+    //      input String, name of Routine
+    //      input String, tag of Routine
+    //      input String, name of Routine Image
+    //      input String, actions of Routine
+    //
+    // Pre-Condition:   Table exists to insert rows to
+    // Post-Condition:  Creates a new row with the information
+    //                  given about the routine.
+    //---------------------------------------------------
     func insert(name: String, tag: String, image: String, actions: String) -> Int64?
     {
         do {
@@ -78,7 +107,15 @@ class RoutineManagerDatabase
         }
     }
     
-    // Query All Records in tblRoutineManagerDatabase
+    //---------------------------------------------------
+    // Function: queryAll()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries all the data in the table
+    //                  and returns an AnySequence<Row>
+    //---------------------------------------------------
     func queryAll() -> AnySequence<Row>?
     {
         do {
@@ -90,7 +127,17 @@ class RoutineManagerDatabase
         }
     }
     
-    // Get Name
+    //---------------------------------------------------
+    // Function: queryName()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the name String of
+    //                  the selected row
+    //---------------------------------------------------
     func queryName(id: Int64) -> String?
     {
         do
@@ -109,7 +156,17 @@ class RoutineManagerDatabase
         return "nil"
     }
     
-    // Get Tag
+    //---------------------------------------------------
+    // Function: queryTag()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the tag String of
+    //                  the selected row
+    //---------------------------------------------------
     func queryTag(id: Int64) -> String?
     {
         do
@@ -128,7 +185,17 @@ class RoutineManagerDatabase
         return "nil"
     }
     
-    // Get ImageName
+    //---------------------------------------------------
+    // Function: queryImageName()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the image name String of
+    //                  the selected row
+    //---------------------------------------------------
     func queryImageName(id: Int64) -> String?
     {
         do
@@ -147,7 +214,17 @@ class RoutineManagerDatabase
         return "nil"
     }
     
-    // Get Actions Array
+    //---------------------------------------------------
+    // Function: queryActionArrayStrings()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the actions String of
+    //                  the selected row
+    //---------------------------------------------------
     func queryActionArrayString(id: Int64) -> String?
     {
         do
@@ -166,7 +243,14 @@ class RoutineManagerDatabase
         return "nil"
     }
     
-    // Delete all rows in tblRoutineManagerDatabase
+    //---------------------------------------------------
+    // Function: deleteAllRows()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Deletes all rows in the table
+    //---------------------------------------------------
     func deleteAllRows()
     {
         do {

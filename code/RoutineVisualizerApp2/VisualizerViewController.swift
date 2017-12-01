@@ -25,7 +25,7 @@ class VisualizerViewController: UIViewController, UITableViewDelegate, UITableVi
     //---------------------------------------------------
     // Function: viewDidLoad()
     //---------------------------------------------------
-    // Parameters: N/A
+    // Parameters: None
     //
     // Pre-Condition: view has been loaded by AppDelegate
     // Post-Condition: The tableview is created upon load

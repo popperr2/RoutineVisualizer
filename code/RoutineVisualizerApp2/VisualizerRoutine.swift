@@ -19,7 +19,15 @@ class VisualizerRoutine: Routine
     var isDone: Bool = false                // True if done
     var isInProgress: Bool = false          // True if in progress
     
-    // Intialize VisualizerRoutine object
+    //---------------------------------------------------
+    // Function: init()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   None
+    // Post-Condition:  Creates a default VisualizerRoutine
+    //                  by overriding Routine's Init
+    //---------------------------------------------------
     override init()
     {
         super.init()

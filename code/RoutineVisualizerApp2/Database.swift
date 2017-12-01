@@ -20,7 +20,15 @@ class Database
     public let connection: Connection?
     public let databaseFileName = "database.sqlite3"
     
-    // Init function
+    //---------------------------------------------------
+    // Function: init()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   SQLite Cocoapods have been installed
+    // Post-Condition:  Creates a Database to store tables
+    //                  and establishes a connection
+    //---------------------------------------------------
     private init()
     {
         let dbPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first as String!

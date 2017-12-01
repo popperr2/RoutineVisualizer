@@ -19,7 +19,18 @@ class Action
     var imageName: String               // Action Image
     var description: String        // Action Description
     
-    // Intialize Action Object
+    //---------------------------------------------------
+    // Function: init()
+    //---------------------------------------------------
+    // Parameters:
+    //      input String, action Name
+    //      input String, action Image Name
+    //      input String, action Description
+    
+    // Pre-Condition:   None
+    // Post-Condition:  Initialize action with the
+    //                  parameters given.
+    //---------------------------------------------------
     init(name: String, imageName: String, description: String)
     {
         self.name = name

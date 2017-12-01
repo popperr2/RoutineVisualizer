@@ -21,7 +21,14 @@ class Routine
     var tag: String                         // The Tag of the Routine
     var actions = Array<Action>()           // Array of Actions
 
-    // Intialize Routine Object
+    //---------------------------------------------------
+    // Function: init()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   None
+    // Post-Condition:  Creates a default Routine
+    //---------------------------------------------------
     init()
     {
         self.name = "nil"
@@ -30,6 +37,19 @@ class Routine
         self.actions = Array<Action>()
     }
     
+    //---------------------------------------------------
+    // Function: init()
+    //---------------------------------------------------
+    // Parameters:
+    //      input String, routine Name
+    //      input String, routine Image Name
+    //      input String, routine Tag
+    //      input Array<Action>, actions Array
+    //
+    // Pre-Condition:   None
+    // Post-Condition:  Creates a routine with the assigned
+    //                  parameters
+    //---------------------------------------------------
     init(name: String, imageName: String, tag: String, actions: Array<Action>)
     {
         self.name = name
@@ -38,7 +58,16 @@ class Routine
         self.actions = actions
     }
     
-    // Add Actions to a Routine Objects Action's Array
+    //---------------------------------------------------
+    // Function: addAction()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Action, action to insert to array
+    //
+    // Pre-Condition:   None
+    // Post-Condition:  Insert action to action array
+    //                  shortcut
+    //---------------------------------------------------
     public func addAction(insertAction: Action)
     {
         print ("Inserting action " + insertAction.name)

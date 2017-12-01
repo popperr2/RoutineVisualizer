@@ -28,7 +28,15 @@ class VisualizerDatabase
     private let routineIsDone = Expression<Bool>("routineIsDone")               // Is Done
     private let routineIsInProgress = Expression<Bool>("routineIsInProgress")   // Is In Progress
     
-    // Intialize Table If Not Already Done
+    //---------------------------------------------------
+    // Function: init()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   Database exists
+    // Post-Condition:  Create table for VisualizerData
+    //                  if does not already exist.
+    //---------------------------------------------------
     private init()
     {
         // Create table if it doesn't already exist
@@ -52,7 +60,16 @@ class VisualizerDatabase
         }
     }
     
-    // Print out contents of database
+    //---------------------------------------------------
+    // Function: toString()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Row, a row in the table
+    //
+    // Pre-Condition:   A row exists in the table
+    // Post-Condition:  Print out the contents of selected
+    //                  Row in String form
+    //---------------------------------------------------
     func toString(routine: Row)
     {
         print   ("""
@@ -66,7 +83,21 @@ class VisualizerDatabase
                 """)
     }
     
-    // Insert a routine into tblVisualizerDatabase
+    //---------------------------------------------------
+    // Function: insert()
+    //---------------------------------------------------
+    // Parameters:
+    //      input String, name of Routine
+    //      input String, tag of Routine
+    //      input String, name of Routine Image
+    //      input String, actions of Routine
+    //      input doneStatus, status of being Done
+    //      input progressStatus, status of Progress
+    //
+    // Pre-Condition:   Table exists to insert rows to
+    // Post-Condition:  Creates a new row with the information
+    //                  given about the routine.
+    //---------------------------------------------------
     func insert(name: String, tag: String, image: String, actions: String, doneStatus: Bool, progressStatus: Bool) -> Int64?
     {
         do {
@@ -80,7 +111,15 @@ class VisualizerDatabase
         }
     }
     
-    // Query All Records in tblVisualizerDatabase
+    //---------------------------------------------------
+    // Function: queryAll()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries all the data in the table
+    //                  and returns an AnySequence<Row>
+    //---------------------------------------------------
     func queryAll() -> AnySequence<Row>?
     {
         do {
@@ -92,7 +131,17 @@ class VisualizerDatabase
         }
     }
     
-    // Get Name
+    //---------------------------------------------------
+    // Function: queryName()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the name String of
+    //                  the selected row
+    //---------------------------------------------------
     func queryName(id: Int64) -> String?
     {
         do
@@ -111,7 +160,17 @@ class VisualizerDatabase
         return "nil"
     }
     
-    // Get Tag
+    //---------------------------------------------------
+    // Function: queryTag()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the tag String of
+    //                  the selected row
+    //---------------------------------------------------
     func queryTag(id: Int64) -> String?
     {
         do
@@ -130,7 +189,17 @@ class VisualizerDatabase
         return "nil"
     }
     
-    // Get ImageName
+    //---------------------------------------------------
+    // Function: queryImageName()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the image name String of
+    //                  the selected row
+    //---------------------------------------------------
     func queryImageName(id: Int64) -> String?
     {
         do
@@ -149,7 +218,17 @@ class VisualizerDatabase
         return "nil"
     }
     
-    // Get Actions Array
+    //---------------------------------------------------
+    // Function: queryActionArrayStrings()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the actions String of
+    //                  the selected row
+    //---------------------------------------------------
     func queryActionArrayString(id: Int64) -> String?
     {
         do
@@ -168,7 +247,17 @@ class VisualizerDatabase
         return "nil"
     }
     
-    // Get isDone Status
+    //---------------------------------------------------
+    // Function: queryIsDone()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the Bool isDone of
+    //                  the selected row
+    //---------------------------------------------------
     func queryIsDone(id: Int64) -> Bool?
     {
         do
@@ -187,7 +276,17 @@ class VisualizerDatabase
         return nil
     }
     
-    // Get isInProgress Status
+    //---------------------------------------------------
+    // Function: queryIsInProgress()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Int64, the primaryKey row Id number
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Queries the data in the table
+    //                  and returns the Bool isInProgress of
+    //                  the selected row
+    //---------------------------------------------------
     func queryIsInProgress(id: Int64) -> Bool?
     {
         do
@@ -206,7 +305,14 @@ class VisualizerDatabase
         return nil
     }
     
-    // Delete all rows in tblVisualizerDatabase
+    //---------------------------------------------------
+    // Function: deleteAllRows()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   Table exists in database
+    // Post-Condition:  Deletes all rows in the table
+    //---------------------------------------------------
     func deleteAllRows()
     {
         do

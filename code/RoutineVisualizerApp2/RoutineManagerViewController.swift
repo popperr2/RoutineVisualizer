@@ -21,7 +21,14 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
     private var routinesArray: Array<Routine> = []      // Holds All Routines from SQL
     private var actionsArray: Array<Action> = []        // Reused array to add actions into routine
     
-    // Runs the first time the view is loaded
+    //---------------------------------------------------
+    // Function: viewDidLoad()
+    //---------------------------------------------------
+    // Parameters: None
+    //
+    // Pre-Condition: view has been loaded by AppDelegate
+    // Post-Condition: The tableview is created upon load
+    //---------------------------------------------------
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -36,7 +43,16 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
         self.view.addSubview(tableView)
     }
     
-    // Runs every time the view is going to appear
+    //---------------------------------------------------
+    // Function: viewWillAppear()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Bool, true if animated
+    //
+    // Pre-Condition:   View has been switched to by a
+    //                  User using UI
+    // Post-Condition:  SQLite database updates routinesArray
+    //---------------------------------------------------
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
@@ -74,7 +90,16 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.reloadData()
     }
     
-    // Runs every time the user clicks off the view
+    //---------------------------------------------------
+    // Function: viewWillDisappear()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Bool, true if animated
+    //
+    // Pre-Condition:   View has been switched off of by a
+    //                  User using UI
+    // Post-Condition:  routinesArray updates SQLite Database
+    //---------------------------------------------------
     override func viewWillDisappear(_ animated: Bool)
     {
         super.viewWillDisappear(animated)
@@ -95,12 +120,34 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
         routinesArray.removeAll()
     }
     
-    // Tells tableView how many cells will be generated
+    //---------------------------------------------------
+    // Function: tableView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableView, tableView
+    //      input Int, the number of rows in table
+    //
+    // Pre-Condition:   tableView exists
+    // Post-Condition:  Returns an integer of how many rows
+    //                  there are based on RoutinesArray
+    //---------------------------------------------------
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return routinesArray.count
     }
     
-    // Tells tableView what type of cells to generate and what their contents are
+    //---------------------------------------------------
+    // Function: tableView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableView, tableView
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition:   tableView exists
+    // Post-Condition:  Returns a UITableViewCell that
+    //                  is created through the method
+    //                  and assigned to elements from
+    //                  routinesArray
+    //---------------------------------------------------
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
@@ -114,13 +161,37 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     // DELETION METHODS
-    // Tells the TableView that cells can be edited / deleted
+    
+    //---------------------------------------------------
+    // Function: tableView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableView, tableView
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition:   tableView exists
+    // Post-Condition:  Returns a Boolean stating if it
+    //                  is okay or not to be able to edit
+    //                  UITableViewCells
+    //---------------------------------------------------
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
     {
         return true
     }
 
-    // Delete cells and update the Arrays
+    //---------------------------------------------------
+    // Function: tableView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableView, tableView
+    //      input UITableViewCellEditingStyle, the editing
+    //      stlyle of the cell
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition:   tableView exists
+    // Post-Condition:  Removes deleted cells from both the
+    //                  routinesArray and UITableView
+    //---------------------------------------------------
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == .delete

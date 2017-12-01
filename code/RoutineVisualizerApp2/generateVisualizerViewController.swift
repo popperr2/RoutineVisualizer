@@ -22,7 +22,14 @@ class GenerateVisualizerViewController: UIViewController
     private var routinesArray: Array<VisualizerRoutine> = []  // Holds Routines
     private var actionsArray: Array<Action> = []
     
-    // Runs the first time the view is loaded
+    //---------------------------------------------------
+    // Function: viewDidLoad()
+    //---------------------------------------------------
+    // Parameters:  None
+    //
+    // Pre-Condition:   View has been loaded by AppDelegate
+    // Post-Condition:  Creates a Button
+    //---------------------------------------------------
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -31,7 +38,16 @@ class GenerateVisualizerViewController: UIViewController
         generateButton.addTarget(self, action: #selector(generateButtonPress), for: .touchUpInside)
     }
     
-    // Runs every time view is going to appear
+    //---------------------------------------------------
+    // Function: viewWillAppear()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Bool, true if animated
+    //
+    // Pre-Condition:   View has been switched to by a
+    //                  User using UI
+    // Post-Condition:  SQLite database updates routinesArray
+    //---------------------------------------------------
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
@@ -65,15 +81,18 @@ class GenerateVisualizerViewController: UIViewController
         }
     }
     
-    // Runs every time view is going to disappear
-    override func viewWillDisappear(_ animated: Bool)
-    {
-        super.viewWillDisappear(animated)
-        
-        //routinesArray.removeAll()
-    }
-    
-    // User presses "generate" button
+    //---------------------------------------------------
+    // Function: generateButtonPress()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UIButton
+    //
+    // Pre-Condition:   Button has been pressed by user
+    // Post-Condition:  If all requirements are met the
+    //                  user's text entry is used to
+    //                  generate a schedule based on
+    //                  routine tags.
+    //---------------------------------------------------
     @objc func generateButtonPress(sender: UIButton!)
     {
         let alertController = UIAlertController()
