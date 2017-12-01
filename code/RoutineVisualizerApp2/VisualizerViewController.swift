@@ -22,7 +22,14 @@ class VisualizerViewController: UIViewController, UITableViewDelegate, UITableVi
     private var routinesArray: Array<VisualizerRoutine> = []      // Holds all visualizer routines in visualizer
     private var actionsArray: Array<Action> = []
     
-    // When the view loads the first time
+    //---------------------------------------------------
+    // Function: viewDidLoad()
+    //---------------------------------------------------
+    // Parameters: N/A
+    //
+    // Pre-Condition: view has been loaded by AppDelegate
+    // Post-Condition: The tableview is created upon load
+    //---------------------------------------------------
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -37,7 +44,18 @@ class VisualizerViewController: UIViewController, UITableViewDelegate, UITableVi
         self.view.addSubview(tableView)
     }
     
-    // Runs every time the view is going to appear
+    //---------------------------------------------------
+    // Function: viewWillAppear()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Bool; animated
+    //
+    // Pre-Condition:   View has been switched to by User
+    //                  using the UI
+    // Post-Condition:  The SQLite Database is loaded into
+    //                  the routineArray and data is
+    //                  reloaded.
+    //---------------------------------------------------
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
@@ -75,7 +93,17 @@ class VisualizerViewController: UIViewController, UITableViewDelegate, UITableVi
         self.tableView.reloadData()
     }
     
-    // Runs every time the user clicks off of the view
+    //---------------------------------------------------
+    // Function: viewWillDisappear()
+    //---------------------------------------------------
+    // Parameters:
+    //      input Bool; animated
+    //
+    // Pre-Condition:   User has clicked off current view
+    // Post-Condition:  SQLite Database will remove old
+    //                  rows and add new rows from routine
+    //                  array.
+    //---------------------------------------------------
     override func viewWillDisappear(_ animated: Bool)
     {
         super.viewWillDisappear(animated)
@@ -96,13 +124,35 @@ class VisualizerViewController: UIViewController, UITableViewDelegate, UITableVi
         routinesArray.removeAll()
     }
     
-    // Tells Tableview how many cells will be generated
+    //---------------------------------------------------
+    // Function: tableView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableView, tableView
+    //      input Int, the number of rows in table
+    //
+    // Pre-Condition:   tableView exists
+    // Post-Condition:  Returns an integer of how many rows
+    //                  there are based on RoutinesArray
+    //---------------------------------------------------
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return routinesArray.count
     }
     
-    // Tells tableview what type of cells to generate and what their contents ares
+    //---------------------------------------------------
+    // Function: tableView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableView, tableView
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition:   tableView exists
+    // Post-Condition:  Returns a UITableViewCell that
+    //                  is created through the method
+    //                  and assigned to elements from
+    //                  routinesArray
+    //---------------------------------------------------
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "visualizerCell", for: indexPath) as! VisualizerTableViewCell
@@ -116,13 +166,37 @@ class VisualizerViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     // DELETION Methods
-    // Tells the Tableview that cells can be edited / deleted
+   
+    //---------------------------------------------------
+    // Function: tableView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableView, tableView
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition:   tableView exists
+    // Post-Condition:  Returns a Boolean stating if it
+    //                  is okay or not to be able to edit
+    //                  UITableViewCells
+    //---------------------------------------------------
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
     {
         return true
     }
     
-    // Delete cells and update the arrays
+    //---------------------------------------------------
+    // Function: tableView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableView, tableView
+    //      input UITableViewCellEditingStyle, the editing
+    //      stlyle of the cell
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition:   tableView exists
+    // Post-Condition:  Removes deleted cells from both the
+    //                  routinesArray and UITableView
+    //---------------------------------------------------
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         // Begin Updates
@@ -131,7 +205,17 @@ class VisualizerViewController: UIViewController, UITableViewDelegate, UITableVi
         // End Updates
     }
     
-    // Customize Delete Swipe Color
+    //---------------------------------------------------
+    // Function: tableView()
+    //---------------------------------------------------
+    // Parameters:
+    //      input UITableView, table View
+    //      input IndexPath, indexPath
+    //
+    // Pre-Condition:   tableView exists
+    // Post-Condition:  Returns [UITableViewRowAction]
+    //                  and changes its UI properties.
+    //---------------------------------------------------
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
     {
         let deleteButton = UITableViewRowAction(style: .default, title: "Complete!") { (action, indexPath) in self.tableView.dataSource?.tableView!(self.tableView, commit: .delete, forRowAt: indexPath)
