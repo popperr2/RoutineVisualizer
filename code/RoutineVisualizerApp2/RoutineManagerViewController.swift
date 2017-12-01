@@ -34,7 +34,6 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 150
         self.view.addSubview(tableView)
-        
     }
     
     // Runs every time the view is going to appear
@@ -45,21 +44,15 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
         // When the view is about to appear, the model will
         // update a blank routineArray based on SQL saved routines
         
-        // Print SQL
-        if let routineManagerDatabaseQueryToString: AnySequence<Row> = RoutineManagerDatabase.shared.queryAll()
-        {
-            for eachRoutine in routineManagerDatabaseQueryToString
-            {
-                RoutineManagerDatabase.shared.toString(routine: eachRoutine)
-            }
-        }
-        
         // For each Routine in RoutineManagerDatabaseQuery, add to RoutinesArray
         if let routineManagerDatabaseQuery: AnySequence<Row> = RoutineManagerDatabase.shared.queryAll()
         {
             var temp: Int = 1
             for eachRoutine in routineManagerDatabaseQuery
             {
+                // Print SQL Contents
+                RoutineManagerDatabase.shared.toString(routine: eachRoutine)
+                
                 // Add Attributes to RoutineHolder
                 let routineHolder = Routine()                // Holds a Routine
                 routineHolder.name = RoutineManagerDatabase.shared.queryName(id: Int64(temp))!
@@ -78,6 +71,16 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
             }
         }
         self.tableView.reloadData()
+        
+        // If there are no routines, alert the user
+        if (routinesArray.isEmpty)
+        {
+            let noRoutinesLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+            noRoutinesLabel.center = self.view.center
+            noRoutinesLabel.textAlignment = .center
+            noRoutinesLabel.text = "No routines in database!"
+            self.view.addSubview(noRoutinesLabel)
+        }
     }
     
     // Runs every time the user clicks off the view

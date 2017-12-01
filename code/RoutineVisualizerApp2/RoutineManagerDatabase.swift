@@ -168,7 +168,7 @@ class RoutineManagerDatabase
             try Database.shared.connection?.run(self.tblRoutineManagerDatabase.delete())
         } catch {
             let nserror = error as NSError
-            print ("Cannot query Routine Name in table RoutineManagerDatabase.  Error is: \(nserror), \(nserror.userInfo)")
+            print ("Cannot delete rows in table RoutineManagerDatabase.  Error is: \(nserror), \(nserror.userInfo)")
         }
     }
 }

@@ -6,8 +6,8 @@
  * Project Name:  Routine Visualizer
  * Project Description:  A mobile application that allows the user to see routines that they should complete that day.
  * Filename:  Routine.swift
- * File Description:  This is a routine object.
- * Last Modified On: November 29, 2017
+ * File Description:  This is a routine object to be used by RoutineManager class.
+ * Last Modified On: November 30, 2017
  * ----------------------------------------------*/
 
 import UIKit
@@ -15,6 +15,7 @@ import Foundation
 
 class Routine
 {
+    // Class Variables
     var name: String                        // Name of the Routine
     var imageName: String                   // Name of the Routine's Image
     var tag: String                         // The Tag of the Routine
@@ -38,7 +39,7 @@ class Routine
     }
     
     // Add Actions to a Routine Objects Action's Array
-    func addAction(insertAction: Action)
+    public func addAction(insertAction: Action)
     {
         print ("Inserting action " + insertAction.name)
         self.actions.append(insertAction)

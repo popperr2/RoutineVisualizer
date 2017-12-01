@@ -26,6 +26,8 @@
 		F0CC29571FCF4E8D004C64D0 /* RoutineVisualizerApp2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC29561FCF4E8D004C64D0 /* RoutineVisualizerApp2UITests.swift */; };
 		F0F6430D1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F6430C1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift */; };
 		F0F6430F1FD113A5008FF0D9 /* VisualizerDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F6430E1FD113A5008FF0D9 /* VisualizerDatabase.swift */; };
+		F0F643111FD116C1008FF0D9 /* VisualizerRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F643101FD116C1008FF0D9 /* VisualizerRoutine.swift */; };
+		F0F643131FD122D0008FF0D9 /* GenerateVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F643121FD122D0008FF0D9 /* GenerateVisualizerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		F0CC29581FCF4E8D004C64D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0F6430C1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizerTableViewCell.swift; sourceTree = "<group>"; };
 		F0F6430E1FD113A5008FF0D9 /* VisualizerDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizerDatabase.swift; sourceTree = "<group>"; };
+		F0F643101FD116C1008FF0D9 /* VisualizerRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizerRoutine.swift; sourceTree = "<group>"; };
+		F0F643121FD122D0008FF0D9 /* GenerateVisualizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateVisualizerViewController.swift; sourceTree = "<group>"; };
 		FBF527E889C14230E22099C2 /* Pods-RoutineVisualizerApp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutineVisualizerApp2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoutineVisualizerApp2/Pods-RoutineVisualizerApp2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,11 +161,13 @@
 			children = (
 				F0CC29341FCF4E8C004C64D0 /* AppDelegate.swift */,
 				F0CC29361FCF4E8C004C64D0 /* VisualizerViewController.swift */,
+				F0F643121FD122D0008FF0D9 /* GenerateVisualizerViewController.swift */,
 				F0F6430E1FD113A5008FF0D9 /* VisualizerDatabase.swift */,
 				F0CC29381FCF4E8C004C64D0 /* RoutineManagerViewController.swift */,
 				F0B6C83B1FD0D5AD005CB569 /* AddNewRoutineViewController.swift */,
 				F0B6C8391FD0BC24005CB569 /* RoutineManagerDatabase.swift */,
 				F055071F1FCF5E4C00D6E92D /* Routine.swift */,
+				F0F643101FD116C1008FF0D9 /* VisualizerRoutine.swift */,
 				F0B6C8371FD0B912005CB569 /* Database.swift */,
 				F0B6C8351FD0B1D0005CB569 /* CustomTableViewCell.swift */,
 				F0F6430C1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift */,
@@ -489,12 +495,14 @@
 				F0F6430D1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift in Sources */,
 				F0CC29391FCF4E8C004C64D0 /* RoutineManagerViewController.swift in Sources */,
 				F0CC29351FCF4E8C004C64D0 /* AppDelegate.swift in Sources */,
+				F0F643131FD122D0008FF0D9 /* GenerateVisualizerViewController.swift in Sources */,
 				F0B6C83C1FD0D5AD005CB569 /* AddNewRoutineViewController.swift in Sources */,
 				F05507201FCF5E4C00D6E92D /* Routine.swift in Sources */,
 				F0F6430F1FD113A5008FF0D9 /* VisualizerDatabase.swift in Sources */,
 				F05507221FCF98AC00D6E92D /* Action.swift in Sources */,
 				F0B6C83A1FD0BC24005CB569 /* RoutineManagerDatabase.swift in Sources */,
 				F0B6C8381FD0B912005CB569 /* Database.swift in Sources */,
+				F0F643111FD116C1008FF0D9 /* VisualizerRoutine.swift in Sources */,
 				F0CC29371FCF4E8C004C64D0 /* VisualizerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

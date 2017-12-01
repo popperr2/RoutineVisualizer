@@ -107,11 +107,32 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oEC-03-lPB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Visualizer" id="WWf-Oe-GUk"/>
+                    <navigationItem key="navigationItem" title="Visualizer" id="WWf-Oe-GUk">
+                        <barButtonItem key="rightBarButtonItem" title="Generate" id="vQA-qx-QY0">
+                            <connections>
+                                <segue destination="kh3-qK-raU" kind="show" id="WqQ-cY-EMI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzQ-gg-VNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1565.5999999999999" y="-459.22038980509751"/>
+        </scene>
+        <!--Generate Visualizer View Controller-->
+        <scene sceneID="eBL-Sz-RsO">
+            <objects>
+                <viewController id="kh3-qK-raU" customClass="GenerateVisualizerViewController" customModule="RoutineVisualizerApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mxq-sX-FQN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ozv-5H-dGv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dkr-EV-wpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2335" y="-464"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Odz-vj-zVS">
