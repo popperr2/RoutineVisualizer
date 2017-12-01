@@ -26,6 +26,11 @@ class RoutineManagerDatabase
     private let routineImageName = Expression<String>("routineImageName")   // Name of Routine Image
     private let actionArrayString = Expression<String>("actionArrayString") // Array of Routine Actions, parsed into a string
     
+    // Variables in ActionTable
+    private let actionName = Expression<String>("actionName")
+    private let actionImageName = Expression<String>("actionImageName")
+    private let actionDescripton = Expression<String>("actionDescription")
+    
     // Intialize table if not already done
     private init()
     {
