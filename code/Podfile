@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '11.0'
 
-target 'Application' do
+target 'RoutineVisualizerApp2' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   
@@ -9,12 +9,12 @@ target 'Application' do
 
   # Pods for Application
 
-  target 'ApplicationTests' do
+  target 'RoutineVisualizerApp2Tests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'ApplicationUITests' do
+  target 'RoutineVisualizerApp2UITests' do
     inherit! :search_paths
     # Pods for testing
   end
