@@ -1,10 +1,14 @@
-//
-//  CustomTableViewCell.swift
-//  ASD Scheduler
-//
-//  Created by Admin on 11/30/17.
-//  Copyright © 2017 Admin. All rights reserved.
-//
+/* ----------------------------------------------*
+ * Name:  Rebecca Popper
+ * Course:  CSC 415
+ * Semester:  Fall 2017
+ * Instructor:  Dr. Pulimood
+ * Project Name:  Routine Visualizer
+ * Project Description:  A mobile application that allows the user to see routines that they should complete that day.
+ * Filename:  CustomTableViewCell.swift
+ * File Description:  Creates a custom table view cell for RoutineManager
+ * Last Modified On: November 30, 2017
+ * ----------------------------------------------*/
 
 import UIKit
 
@@ -13,12 +17,12 @@ class CustomTableViewCell: UITableViewCell
     // Class Variables
     var nameText: String? =  "TestName"
     var tagText: String? = "TestTag"
+    var imageViewLabel: UIImageView!
     
     let padding: CGFloat = 5
     var background: UIView!
     var nameLabel: UILabel!
     var tagLabel: UILabel!
-    var imageViewLabel: UIImageView!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?)
     {

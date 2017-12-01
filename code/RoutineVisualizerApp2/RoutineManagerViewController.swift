@@ -17,8 +17,7 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
 {
     // Class Variables
     private var tableView: UITableView!
-    
-    private var routineHolder = Routine()                // Holds a Routine
+
     private var routinesArray: Array<Routine> = []      // Holds All Routines from SQL
     private var actionsArray: Array<Action> = []        // Reused array to add actions into routine
     
@@ -36,21 +35,6 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
         tableView.rowHeight = 150
         self.view.addSubview(tableView)
         
-        // Manually Insert Routines
-        // Put actions in ActionsArray
-        let exampleAction = Action(name: "exampleAction", imageName: "sun", description: "exampleActionDescription")
-        actionsArray.append(exampleAction)
-        actionsArray.append(exampleAction)
-        
-        // Define Routines
-        let myRoutine = Routine(name: "MyRoutine", imageName: "sun", tag: "morning", actions: actionsArray)
-        let myOtherRoutine = Routine(name: "MyOtherRoutine", imageName: "sun", tag: "night", actions: actionsArray)
-        let myThirdRoutine = Routine(name: "MyThirdRoutine", imageName: "sun", tag: "morning", actions: actionsArray)
-        
-        // Add To Array
-        //routinesArray.append(myRoutine)
-        //routinesArray.append(myOtherRoutine)
-        //routinesArray.append(myThirdRoutine)
     }
     
     // Runs every time the view is appear
@@ -77,6 +61,7 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
             for eachRoutine in routineManagerDatabaseQuery
             {
                 // Add Attributes to RoutineHolder
+                let routineHolder = Routine()                // Holds a Routine
                 routineHolder.name = RoutineManagerDatabase.shared.queryName(id: Int64(temp))!
                 routineHolder.tag = RoutineManagerDatabase.shared.queryTag(id: Int64(temp))!
                 routineHolder.imageName = RoutineManagerDatabase.shared.queryImageName(id: Int64(temp))!
@@ -92,6 +77,7 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
                 temp = temp + 1
             }
         }
+        self.tableView.reloadData()
     }
     
     // Runs every time the user clicks off the view
@@ -126,7 +112,6 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         
         // Assign from RoutinesArray to Cell
-        print(routinesArray[indexPath.row].name)
         cell.nameLabel.text = routinesArray[indexPath.row].name
         cell.tagLabel.text = routinesArray[indexPath.row].tag
         cell.imageViewLabel?.image = UIImage(named: routinesArray[indexPath.row].imageName)

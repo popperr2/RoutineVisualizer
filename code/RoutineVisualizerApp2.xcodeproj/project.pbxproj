@@ -24,6 +24,7 @@
 		F0CC29411FCF4E8C004C64D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CC293F1FCF4E8C004C64D0 /* LaunchScreen.storyboard */; };
 		F0CC294C1FCF4E8D004C64D0 /* RoutineVisualizerApp2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC294B1FCF4E8D004C64D0 /* RoutineVisualizerApp2Tests.swift */; };
 		F0CC29571FCF4E8D004C64D0 /* RoutineVisualizerApp2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC29561FCF4E8D004C64D0 /* RoutineVisualizerApp2UITests.swift */; };
+		F0F6430D1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F6430C1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		F0CC29521FCF4E8D004C64D0 /* RoutineVisualizerApp2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutineVisualizerApp2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CC29561FCF4E8D004C64D0 /* RoutineVisualizerApp2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineVisualizerApp2UITests.swift; sourceTree = "<group>"; };
 		F0CC29581FCF4E8D004C64D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0F6430C1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizerTableViewCell.swift; sourceTree = "<group>"; };
 		FBF527E889C14230E22099C2 /* Pods-RoutineVisualizerApp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutineVisualizerApp2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoutineVisualizerApp2/Pods-RoutineVisualizerApp2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 				F055071F1FCF5E4C00D6E92D /* Routine.swift */,
 				F0B6C8371FD0B912005CB569 /* Database.swift */,
 				F0B6C8351FD0B1D0005CB569 /* CustomTableViewCell.swift */,
+				F0F6430C1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift */,
 				F05507211FCF98AC00D6E92D /* Action.swift */,
 				F0CC293F1FCF4E8C004C64D0 /* LaunchScreen.storyboard */,
 				F0CC293A1FCF4E8C004C64D0 /* Main.storyboard */,
@@ -480,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0B6C8361FD0B1D0005CB569 /* CustomTableViewCell.swift in Sources */,
+				F0F6430D1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift in Sources */,
 				F0CC29391FCF4E8C004C64D0 /* RoutineManagerViewController.swift in Sources */,
 				F0CC29351FCF4E8C004C64D0 /* AppDelegate.swift in Sources */,
 				F0B6C83C1FD0D5AD005CB569 /* AddNewRoutineViewController.swift in Sources */,

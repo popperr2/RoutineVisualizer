@@ -1,10 +1,14 @@
-//
-//  AppDelegate.swift
-//  RoutineVisualizerApp2
-//
-//  Created by Rebecca Popper on 11/29/17.
-//  Copyright © 2017 Rebecca Popper. All rights reserved.
-//
+/* ----------------------------------------------*
+ * Name:  Rebecca Popper
+ * Course:  CSC 415
+ * Semester:  Fall 2017
+ * Instructor:  Dr. Pulimood
+ * Project Name:  Routine Visualizer
+ * Project Description:  A mobile application that allows the user to see routines that they should complete that day.
+ * Filename:  AddNewRoutineViewController.swift
+ * File Description:  This View Controller contains the view for adding new routines to the RoutineManager.
+ * Last Modified On: November 30, 2017
+ * ----------------------------------------------*/
 
 import UIKit
 
@@ -12,9 +16,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    // Add Description
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    {
         // Override point for customization after application launch.
         return true
     }

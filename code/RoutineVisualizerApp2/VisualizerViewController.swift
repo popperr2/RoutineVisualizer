@@ -11,14 +11,23 @@
  * ----------------------------------------------*/
 
 import UIKit
+import SQLite
 
 class VisualizerViewController: UIViewController
 {
-
+    // Class Variables
+    private var tableView: UITableView!
+    
     // When the view loads the first time
     override func viewDidLoad()
     {
         super.viewDidLoad()
+    }
+    
+    // When the view is going to display
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
     }
 }
 

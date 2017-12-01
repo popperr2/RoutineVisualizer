@@ -29,12 +29,6 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        // Set Up Routine Name Box
-        
-        
-        // Set Up Routine Tag Box
-        
         // Set Up Routine Image Selection
         // Set Up CollectionView
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 400, height: 200), collectionViewLayout: UICollectionViewLayout())
@@ -62,7 +56,7 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
         collectionView?.dataSource = self
         collectionView?.reloadData()
         
-        // Set Up Routine Actions Selection
+        // TO DO: Set Up Routine Actions Selection
     }
     
     // User clicks Submission Button
