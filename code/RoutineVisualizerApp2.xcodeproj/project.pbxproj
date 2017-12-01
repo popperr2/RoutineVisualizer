@@ -25,6 +25,7 @@
 		F0CC294C1FCF4E8D004C64D0 /* RoutineVisualizerApp2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC294B1FCF4E8D004C64D0 /* RoutineVisualizerApp2Tests.swift */; };
 		F0CC29571FCF4E8D004C64D0 /* RoutineVisualizerApp2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC29561FCF4E8D004C64D0 /* RoutineVisualizerApp2UITests.swift */; };
 		F0F6430D1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F6430C1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift */; };
+		F0F6430F1FD113A5008FF0D9 /* VisualizerDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F6430E1FD113A5008FF0D9 /* VisualizerDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		F0CC29561FCF4E8D004C64D0 /* RoutineVisualizerApp2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineVisualizerApp2UITests.swift; sourceTree = "<group>"; };
 		F0CC29581FCF4E8D004C64D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0F6430C1FD0FCD2008FF0D9 /* VisualizerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizerTableViewCell.swift; sourceTree = "<group>"; };
+		F0F6430E1FD113A5008FF0D9 /* VisualizerDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizerDatabase.swift; sourceTree = "<group>"; };
 		FBF527E889C14230E22099C2 /* Pods-RoutineVisualizerApp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutineVisualizerApp2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoutineVisualizerApp2/Pods-RoutineVisualizerApp2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 			children = (
 				F0CC29341FCF4E8C004C64D0 /* AppDelegate.swift */,
 				F0CC29361FCF4E8C004C64D0 /* VisualizerViewController.swift */,
+				F0F6430E1FD113A5008FF0D9 /* VisualizerDatabase.swift */,
 				F0CC29381FCF4E8C004C64D0 /* RoutineManagerViewController.swift */,
 				F0B6C83B1FD0D5AD005CB569 /* AddNewRoutineViewController.swift */,
 				F0B6C8391FD0BC24005CB569 /* RoutineManagerDatabase.swift */,
@@ -488,6 +491,7 @@
 				F0CC29351FCF4E8C004C64D0 /* AppDelegate.swift in Sources */,
 				F0B6C83C1FD0D5AD005CB569 /* AddNewRoutineViewController.swift in Sources */,
 				F05507201FCF5E4C00D6E92D /* Routine.swift in Sources */,
+				F0F6430F1FD113A5008FF0D9 /* VisualizerDatabase.swift in Sources */,
 				F05507221FCF98AC00D6E92D /* Action.swift in Sources */,
 				F0B6C83A1FD0BC24005CB569 /* RoutineManagerDatabase.swift in Sources */,
 				F0B6C8381FD0B912005CB569 /* Database.swift in Sources */,

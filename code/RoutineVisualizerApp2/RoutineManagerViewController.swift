@@ -37,7 +37,7 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
-    // Runs every time the view is appear
+    // Runs every time the view is going to appear
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
