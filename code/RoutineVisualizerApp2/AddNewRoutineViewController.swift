@@ -24,6 +24,7 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
     var selectedImage: String!
     
     var imageNameArray = ["sun", "moon", "sun", "sun", "moon", "moon", "sun"]
+    var tagArray = ["Morning", "Midday", "Night"]
     
     // Runs as it is loaded the first time
     override func viewDidLoad()
@@ -55,6 +56,8 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
         collectionView?.delegate = self
         collectionView?.dataSource = self
         collectionView?.reloadData()
+        
+        // Routine Tags Selection
         
         // TO DO: Set Up Routine Actions Selection
     }
@@ -98,9 +101,7 @@ class AddNewRoutineViewController: UIViewController, UICollectionViewDelegate, U
             // Pop back to RoutineManager View
             navigationController?.popViewController(animated: true)
         }
-        
     }
-    
     
     // COLLECTION VIEW FUNCTIONS
     // Determines how many collection view cells to make

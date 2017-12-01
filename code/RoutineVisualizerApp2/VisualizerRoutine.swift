@@ -20,16 +20,9 @@ class VisualizerRoutine: Routine
     var isInProgress: Bool = false          // True if in progress
     
     // Intialize VisualizerRoutine object
-    convenience override init()
+    override init()
     {
-        self.init()
-        self.isDone = false
-        self.isInProgress = false
-    }
-    
-    convenience init(name: String, imageName: String, tag: String, actions: Array<Action>, isDone: Bool, isInProgress: Bool)
-    {
-        self.init(name: name, imageName: imageName, tag: tag, actions: actions)
+        super.init()
         self.isDone = false
         self.isInProgress = false
     }

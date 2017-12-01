@@ -70,17 +70,22 @@ class RoutineManagerViewController: UIViewController, UITableViewDelegate, UITab
                 temp = temp + 1
             }
         }
-        self.tableView.reloadData()
         
         // If there are no routines, alert the user
+        let noRoutinesLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        noRoutinesLabel.center = self.view.center
+        noRoutinesLabel.textAlignment = .center
+        noRoutinesLabel.text = "No routines in database!"
         if (routinesArray.isEmpty)
         {
-            let noRoutinesLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-            noRoutinesLabel.center = self.view.center
-            noRoutinesLabel.textAlignment = .center
-            noRoutinesLabel.text = "No routines in database!"
             self.view.addSubview(noRoutinesLabel)
         }
+        if (routinesArray.isEmpty == false)
+        {
+            noRoutinesLabel.removeFromSuperview()
+        }
+        
+        self.tableView.reloadData()
     }
     
     // Runs every time the user clicks off the view

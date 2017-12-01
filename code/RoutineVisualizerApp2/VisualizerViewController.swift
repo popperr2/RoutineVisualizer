@@ -67,19 +67,25 @@ class VisualizerViewController: UIViewController, UITableViewDelegate, UITableVi
                 
                 // Add RoutineHolder to routinesArray
                 routinesArray.append(routineHolder)
+                
+                temp = temp + 1
             }
         }
-        self.tableView.reloadData()
-        
+        let noScheduleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
+        noScheduleLabel.center = self.view.center
+        noScheduleLabel.textAlignment = .center
+        noScheduleLabel.text = "No current schedule. Tap generate."
         // If there are no routines, alert the user
         if (routinesArray.isEmpty)
         {
-            let noScheduleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
-            noScheduleLabel.center = self.view.center
-            noScheduleLabel.textAlignment = .center
-            noScheduleLabel.text = "No current schedule. Tap generate."
             self.view.addSubview(noScheduleLabel)
         }
+        if (routinesArray.isEmpty == false)
+        {
+            noScheduleLabel.removeFromSuperview()
+        }
+        
+        self.tableView.reloadData()
     }
     
     // Runs every time the user clicks off of the view
